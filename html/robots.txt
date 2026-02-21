@@ -1,2 +1,6 @@
 User-agent: *
-Disallow: /cgi-bin
+Disallow: /cgi-bin/
+Disallow: /assets/web/assets/gdpr-plugin/
+Allow: /
+
+Sitemap: https://bkmimari.com/sitemap.xml

@@ -1,0 +1,643 @@
+/* =============================================================
+   BK MİMARİ — Tasarım Geliştirme
+   Tema: Lüks Minimal Mimarlık — Koyu Lacivert & Altın
+   ============================================================= */
+
+/* ─── CUSTOM FONTS ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ─── CSS VARIABLES ─────────────────────────────────────────── */
+:root {
+  --bk-navy:       #0c2c68;
+  --bk-navy-dark:  #081d45;
+  --bk-gold:       #b89a5a;
+  --bk-gold-light: #d4b97a;
+  --bk-cream:      #f7f5f0;
+  --bk-white:      #ffffff;
+  --bk-charcoal:   #2a2a2a;
+  --bk-mid:        #6b6b6b;
+  --bk-light:      #e8e4dc;
+  --bk-border:     #e2ddd5;
+
+  --ff-display: 'Cormorant Garamond', Georgia, serif;
+  --ff-body:    'DM Sans', sans-serif;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --shadow-soft: 0 4px 20px rgba(12,44,104,0.08);
+  --shadow-card: 0 8px 40px rgba(12,44,104,0.12);
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── GLOBAL RESET / BASE ───────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--ff-body) !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  color: var(--bk-charcoal) !important;
+  background: var(--bk-white) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── TYPOGRAPHY OVERRIDES ──────────────────────────────────── */
+h1, h2, h3, h4, h5, h6,
+.mbr-section-title,
+.mbr-section-subtitle,
+.card-title,
+.cardTitle,
+.mbr-text strong {
+  font-family: var(--ff-display) !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.2 !important;
+  color: var(--bk-navy) !important;
+}
+
+.mbr-text,
+.mbr-fonts-style,
+p {
+  font-family: var(--ff-body) !important;
+  color: var(--bk-charcoal) !important;
+  line-height: 1.8 !important;
+}
+
+/* ─── NAVBAR ────────────────────────────────────────────────── */
+.menu .navbar,
+.navbar-dropdown {
+  background: var(--bk-white) !important;
+  border-bottom: 1px solid var(--bk-border) !important;
+  box-shadow: 0 2px 16px rgba(12,44,104,0.06) !important;
+  padding: 0 !important;
+  min-height: 72px !important;
+  transition: background var(--transition), box-shadow var(--transition) !important;
+}
+
+.navbar.scrolled,
+.navbar-scrolled {
+  box-shadow: 0 4px 24px rgba(12,44,104,0.13) !important;
+}
+
+/* Logo */
+.navbar-brand img {
+  transition: opacity var(--transition) !important;
+}
+.navbar-brand img:hover { opacity: 0.85 !important; }
+
+/* Nav links */
+.navbar-nav .nav-link {
+  font-family: var(--ff-body) !important;
+  font-size: 0.82rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: var(--bk-charcoal) !important;
+  padding: 0.5rem 1.1rem !important;
+  position: relative !important;
+  transition: color var(--transition) !important;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background: var(--bk-gold);
+  transition: left var(--transition), right var(--transition);
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--bk-navy) !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+  left: 1.1rem;
+  right: 1.1rem;
+}
+
+/* İcon menü (telefon & mail) */
+.icons-menu .iconfont-wrapper {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 38px !important;
+  height: 38px !important;
+  border: 1px solid var(--bk-border) !important;
+  border-radius: 50% !important;
+  margin-left: 6px !important;
+  transition: background var(--transition), border-color var(--transition) !important;
+}
+
+.icons-menu .iconfont-wrapper:hover {
+  background: var(--bk-navy) !important;
+  border-color: var(--bk-navy) !important;
+}
+
+.icons-menu .iconfont-wrapper:hover .mbr-iconfont {
+  color: var(--bk-white) !important;
+}
+
+.icons-menu .mbr-iconfont {
+  font-size: 1rem !important;
+  color: var(--bk-navy) !important;
+  padding: 0 !important;
+  transition: color var(--transition) !important;
+}
+
+/* Hamburger */
+.hamburger span {
+  background: var(--bk-navy) !important;
+  height: 2px !important;
+  border-radius: 0 !important;
+  transition: transform 0.3s ease, opacity 0.3s ease !important;
+}
+
+/* ─── HERO / VIDEO SECTION ──────────────────────────────────── */
+.header18.mbr-fullscreen,
+#video-5-uUOQPGxsQo {
+  position: relative !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+/* Overlay gradient daha dramatik */
+.mbr-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(8,29,69,0.5) 0%,
+    rgba(8,29,69,0.25) 60%,
+    rgba(8,29,69,0.7) 100%
+  ) !important;
+  opacity: 1 !important;
+}
+
+/* Hero alt başlık bandı */
+#video-5-uUOQPGxsQo::after {
+  content: 'MİMARLIK & İÇ MİMARLIK';
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--ff-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.75);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ─── SECTIONS GENEL ────────────────────────────────────────── */
+section {
+  background-color: var(--bk-white) !important;
+}
+
+section:nth-child(even):not(.menu):not(#video-5-uUOQPGxsQo) {
+  background-color: var(--bk-cream) !important;
+}
+
+/* ─── BÖLÜM BAŞLIKLARI ──────────────────────────────────────── */
+.mbr-section-title {
+  font-size: clamp(2rem, 4vw, 3.5rem) !important;
+  font-weight: 500 !important;
+  color: var(--bk-navy) !important;
+  position: relative !important;
+}
+
+/* Altın çizgi süsü */
+.content-head .mbr-section-title::after,
+.mbr-section-head .mbr-section-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--bk-gold);
+  margin: 1rem auto 0;
+}
+
+.mbr-section-subtitle {
+  font-size: 0.9rem !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  color: var(--bk-gold) !important;
+  font-family: var(--ff-body) !important;
+  font-weight: 500 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* ─── GALERİ (index.html) ───────────────────────────────────── */
+.gallery1 {
+  padding: 5rem 0 !important;
+  background: var(--bk-charcoal) !important;
+}
+
+.gallery1 .mbr-section-title {
+  color: var(--bk-white) !important;
+  font-weight: 300 !important;
+}
+
+.gallery1 .mbr-section-title::after {
+  background: var(--bk-gold) !important;
+}
+
+.gallery1 .item-wrapper {
+  overflow: hidden !important;
+  position: relative !important;
+  aspect-ratio: 1 / 1.1 !important;
+}
+
+.gallery1 .item-wrapper img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.gallery1 .item-wrapper:hover img {
+  transform: scale(1.06) !important;
+}
+
+.gallery1 .icon-wrapper {
+  position: absolute !important;
+  inset: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(8,29,69,0) !important;
+  transition: background var(--transition) !important;
+}
+
+.gallery1 .item-wrapper:hover .icon-wrapper {
+  background: rgba(8,29,69,0.45) !important;
+}
+
+.gallery1 .icon-wrapper .mbr-iconfont {
+  color: transparent !important;
+  font-size: 2rem !important;
+  transition: color var(--transition) !important;
+}
+
+.gallery1 .item-wrapper:hover .icon-wrapper .mbr-iconfont {
+  color: var(--bk-white) !important;
+}
+
+/* ─── HAKKIMIZDA (Hak.html) ─────────────────────────────────── */
+.article4 {
+  padding: 0 !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.article4 .image-wrapper {
+  padding: 0 !important;
+}
+
+.article4 .image-wrapper img {
+  width: 100% !important;
+  height: 100vh !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.article4 .text-wrapper {
+  padding: 4rem 3rem 4rem 4rem !important;
+}
+
+.article4 .mbr-text {
+  font-size: 1.05rem !important;
+  line-height: 1.9 !important;
+  color: var(--bk-mid) !important;
+}
+
+/* İstatistik bandı hakkımızda */
+.article4::before {
+  content: '';
+  display: block;
+}
+
+/* ─── HİZMETLER (hizmet.html) ──────────────────────────────── */
+.article07 {
+  padding: 6rem 0 !important;
+  background: var(--bk-cream) !important;
+}
+
+.article07 .card {
+  background: transparent !important;
+  border: none !important;
+}
+
+.article07 .card-wrapper {
+  background: var(--bk-white) !important;
+  border: 1px solid var(--bk-border) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 3rem 3.5rem !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+/* Hizmet listesi: her strong bir kart gibi */
+.article07 .mbr-text {
+  font-size: 1rem !important;
+  line-height: 2 !important;
+}
+
+.article07 .mbr-text strong {
+  display: block !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: var(--bk-navy) !important;
+  margin-top: 2rem !important;
+  padding-bottom: 0.4rem !important;
+  border-bottom: 1px solid var(--bk-gold) !important;
+}
+
+.article07 .mbr-text strong:first-child {
+  margin-top: 0 !important;
+}
+
+/* ─── PROJELER (proje.html) ─────────────────────────────────── */
+/* Proje başlık banner */
+.proje-hero-banner {
+  background: var(--bk-navy) !important;
+  padding: 6rem 0 4rem !important;
+  text-align: center !important;
+}
+
+/* Galeri section genel */
+section[id*="gallery"],
+section[id*="Gallery"],
+.gallery {
+  padding: 3rem 0 !important;
+}
+
+/* Proje galeri thumbnail */
+.mbr-gallery .item-wrapper {
+  overflow: hidden !important;
+  border-radius: var(--radius-sm) !important;
+  position: relative !important;
+}
+
+.mbr-gallery .item-wrapper img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+.mbr-gallery .item-wrapper:hover img {
+  transform: scale(1.05) !important;
+}
+
+/* Proje başlıkları */
+.mbr-gallery-title,
+.mbr-item-subtitle {
+  font-family: var(--ff-body) !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: var(--bk-mid) !important;
+  margin-top: 0.5rem !important;
+}
+
+/* ─── REFERANSLAR (refer.html) ──────────────────────────────── */
+#clients04-1h {
+  padding: 6rem 0 !important;
+  background: var(--bk-cream) !important;
+}
+
+.clients04 .item-img {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 120px !important;
+  padding: 2rem !important;
+  background: var(--bk-white) !important;
+  border: 1px solid var(--bk-border) !important;
+  border-radius: var(--radius-md) !important;
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition) !important;
+}
+
+.clients04 .item-img:hover {
+  box-shadow: var(--shadow-card) !important;
+  transform: translateY(-4px) !important;
+  border-color: var(--bk-gold) !important;
+}
+
+.clients04 .item-img img {
+  max-height: 72px !important;
+  width: auto !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  filter: grayscale(40%) opacity(0.85) !important;
+  transition: filter var(--transition) !important;
+}
+
+.clients04 .item-img:hover img {
+  filter: grayscale(0%) opacity(1) !important;
+}
+
+/* ─── İLETİŞİM (ilet.html) ─────────────────────────────────── */
+.contacts02 {
+  padding: 6rem 0 !important;
+}
+
+.contacts02 .card-wrapper {
+  background: var(--bk-navy) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 3rem !important;
+  height: 100% !important;
+}
+
+.contacts02 .cardTitle {
+  color: var(--bk-gold) !important;
+  font-size: 1.8rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.contacts02 .list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.contacts02 .list .mbr-text {
+  color: rgba(255,255,255,0.85) !important;
+  font-size: 0.95rem !important;
+  padding: 0.5rem 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  display: block !important;
+  line-height: 1.6 !important;
+}
+
+.contacts02 .list .mbr-text:last-child {
+  border-bottom: none !important;
+}
+
+.contacts02 .map-wrapper {
+  border-radius: var(--radius-md) !important;
+  overflow: hidden !important;
+  min-height: 400px !important;
+}
+
+.contacts02 .google-map,
+.contacts02 .google-map iframe {
+  width: 100% !important;
+  height: 400px !important;
+  border: none !important;
+  display: block !important;
+}
+
+/* ─── FOOTER / BUILDER BADGE GİZLE ─────────────────────────── */
+section.display-7:has(a[href*="zaferkaraca"]) {
+  display: none !important;
+}
+
+/* Fallback: son .display-7 section'ı gizle */
+body > section.display-7:last-of-type {
+  display: none !important;
+}
+
+/* ─── FOOTER BANDI ──────────────────────────────────────────── */
+body::after {
+  content: '© 2025 BK Mimari Tasarım · Acıbadem, Kadıköy / İstanbul · T: 0532 695 98 56';
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-family: var(--ff-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.65);
+  background: var(--bk-navy-dark);
+}
+
+/* ─── BUTTONS ───────────────────────────────────────────────── */
+.btn,
+.mbr-section-btn a {
+  font-family: var(--ff-body) !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  padding: 0.8rem 2.2rem !important;
+  border-radius: 0 !important;
+  transition: all var(--transition) !important;
+}
+
+.btn-primary,
+.btn-primary-outline {
+  background: var(--bk-navy) !important;
+  border-color: var(--bk-navy) !important;
+  color: var(--bk-white) !important;
+}
+
+.btn-primary:hover {
+  background: var(--bk-gold) !important;
+  border-color: var(--bk-gold) !important;
+  color: var(--bk-white) !important;
+}
+
+/* ─── COOKIE BANNER ─────────────────────────────────────────── */
+.gdpr-block,
+[class*="cookies-alert"] {
+  font-family: var(--ff-body) !important;
+  font-size: 0.85rem !important;
+  border-radius: 0 !important;
+  border-top: 2px solid var(--bk-gold) !important;
+}
+
+/* ─── SCROLLBAR ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bk-cream); }
+::-webkit-scrollbar-thumb { background: var(--bk-navy); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--bk-gold); }
+
+/* ─── SEÇİM RENGİ ───────────────────────────────────────────── */
+::selection { background: var(--bk-gold); color: var(--bk-white); }
+
+/* ─── MODAL (GALERİ LIGHTBOX) ───────────────────────────────── */
+.modal-content {
+  border: none !important;
+  border-radius: 0 !important;
+  background: var(--bk-charcoal) !important;
+}
+
+.carousel-control {
+  background: rgba(12,44,104,0.6) !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.carousel-control:hover {
+  background: var(--bk-navy) !important;
+  opacity: 1 !important;
+}
+
+/* ─── PAGE TRANSITION ───────────────────────────────────────── */
+body {
+  animation: bkFadeIn 0.5s ease-out;
+}
+
+@keyframes bkFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 991px) {
+  .article4 .image-wrapper img {
+    height: 55vw !important;
+    min-height: 300px !important;
+  }
+  .article4 .text-wrapper {
+    padding: 2.5rem 1.5rem !important;
+  }
+  .article07 .card-wrapper {
+    padding: 2rem !important;
+  }
+  .contacts02 .card-wrapper {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 1rem !important;
+    padding: 0.75rem 1rem !important;
+    letter-spacing: 0.05em !important;
+  }
+  .mbr-section-title {
+    font-size: clamp(1.8rem, 6vw, 2.8rem) !important;
+  }
+  .article4 .image-wrapper img {
+    height: 60vw !important;
+  }
+  .article07 .card-wrapper {
+    padding: 1.5rem !important;
+  }
+}
+
+/* ─── SECTION PADDING STANDARTLAMA ─────────────────────────── */
+section:not(.menu):not(#video-5-uUOQPGxsQo):not(.article4):not(.display-7) {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+/* ─── NAV ACTIVE VURGU ──────────────────────────────────────── */
+.navbar-nav .nav-link[aria-current="page"] {
+  color: var(--bk-navy) !important;
+  font-weight: 600 !important;
+}
+
+.navbar-nav .nav-link[aria-current="page"]::after {
+  left: 1.1rem !important;
+  right: 1.1rem !important;
+  background: var(--bk-gold) !important;
+}
