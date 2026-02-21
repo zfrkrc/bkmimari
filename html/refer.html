@@ -14,7 +14,7 @@
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav__inner">
-    <a href="index.html" class="nav__logo"><img src="assets/images/whatsapp-grsel-2025-08-25-saat-10.02.35-0e6d48e2-377x126.webp" alt="BK Mimari Tasarım" style="height:44px;max-height:44px;width:auto;display:block;flex-shrink:0;">
+    <a href="index.html" class="nav__logo"><img src="assets/images/whatsapp-grsel-2025-08-25-saat-10.02.35-0e6d48e2-377x126.webp" alt="BK Mimari Tasarım" style="height:44px!important;max-height:44px!important;min-height:44px!important;width:auto!important;display:block;flex-shrink:0;">
     </a>
     <ul class="nav__links" id="navLinks">
       <li><a href="Hak.html" class="nav__link">Hakkımızda</a></li>
@@ -103,10 +103,57 @@
   </div>
 </footer>
 
+
 <script>
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
-document.getElementById('navToggle').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+(function() {
+  var nav      = document.getElementById('nav');
+  var toggle   = document.getElementById('navToggle');
+  var links    = document.getElementById('navLinks');
+  var isOpen   = false;
+
+  // Scroll → gölge ekle, logo boyutu değişmez
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  // Hamburger aç/kapat
+  toggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    isOpen = !isOpen;
+    links.classList.toggle('open', isOpen);
+    // X animasyonu
+    var spans = toggle.querySelectorAll('span');
+    if (isOpen) {
+      spans[0].style.transform = 'translateY(6.5px) rotate(45deg)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'translateY(-6.5px) rotate(-45deg)';
+    } else {
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[2].style.transform = '';
+    }
+  });
+
+  // Dışarı tıklayınca kapat
+  document.addEventListener('click', function(e) {
+    if (isOpen && !nav.contains(e.target)) {
+      isOpen = false;
+      links.classList.remove('open');
+      var spans = toggle.querySelectorAll('span');
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[2].style.transform = '';
+    }
+  });
+
+  // Menü linkine tıklayınca kapat (aynı sayfada)
+  links.querySelectorAll('.nav__link').forEach(function(a) {
+    a.addEventListener('click', function() {
+      isOpen = false;
+      links.classList.remove('open');
+    });
+  });
+})();
 </script>
 </body>
 </html>
