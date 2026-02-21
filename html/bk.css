@@ -100,6 +100,8 @@ ul { list-style: none; }
   top: 0; left: 0; right: 0;
   z-index: 1000;
   height: 72px;
+  min-height: 72px;
+  max-height: 72px;
   display: flex;
   align-items: center;
   background: rgba(255,255,255,.97);
@@ -117,8 +119,27 @@ ul { list-style: none; }
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 2.5rem;
+  height: 72px;
 }
-.nav__logo img { height: 48px; width: auto; }
+.nav__logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 72px;
+  line-height: 0;
+}
+.nav__logo img {
+  height: 44px;
+  width: auto;
+  min-width: 0;
+  max-height: 44px;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+  /* Tarayıcının yeniden hesaplamasını önle */
+  will-change: auto;
+  transform: translateZ(0);
+}
 .nav__links {
   display: flex;
   align-items: center;
