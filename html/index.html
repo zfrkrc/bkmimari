@@ -118,6 +118,67 @@ document.getElementById('navToggle').addEventListener('click', () => {
 </script>
 <script>
 (function() {
+  var imgs = [];
+  var cur  = 0;
+  var overlay = document.getElementById('lb');
+  var lbImg   = document.getElementById('lbImg');
+  var counter = document.getElementById('lbCounter');
+
+  // Collect all clickable images (gallery, project thumbs, ref cards)
+  function collectImages() {
+    var selectors = '.gallery-item img, .project-thumb img, .ref-card img';
+    document.querySelectorAll(selectors).forEach(function(img, i) {
+      img.style.cursor = 'zoom-in';
+      imgs.push(img.src);
+      img.addEventListener('click', function(e) {
+        e.stopPropagation();
+        open(i);
+      });
+    });
+  }
+
+  function open(index) {
+    cur = index;
+    show();
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function show() {
+    lbImg.src = imgs[cur];
+    counter.textContent = (cur + 1) + ' / ' + imgs.length;
+  }
+
+  function prev() { cur = (cur - 1 + imgs.length) % imgs.length; show(); }
+  function next() { cur = (cur + 1) % imgs.length; show(); }
+
+  document.getElementById('lbClose').addEventListener('click', close);
+  document.getElementById('lbPrev').addEventListener('click', function(e) { e.stopPropagation(); prev(); });
+  document.getElementById('lbNext').addEventListener('click', function(e) { e.stopPropagation(); next(); });
+
+  // Overlay'e tıklayınca kapat
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) close();
+  });
+
+  // Klavye
+  document.addEventListener('keydown', function(e) {
+    if (!overlay.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'ArrowRight') next();
+  });
+
+  collectImages();
+})();
+</script>
+<script>
+(function() {
   var nav      = document.getElementById('nav');
   var toggle   = document.getElementById('navToggle');
   var links    = document.getElementById('navLinks');
@@ -167,5 +228,15 @@ document.getElementById('navToggle').addEventListener('click', () => {
   });
 })();
 </script>
+
+<!-- LIGHTBOX -->
+<div class="lb-overlay" id="lb">
+  <button class="lb-close" id="lbClose">&#215;</button>
+  <button class="lb-prev" id="lbPrev">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-next" id="lbNext">&#8250;</button>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
 </body>
 </html>
