@@ -112,10 +112,17 @@
   var lbImg   = document.getElementById('lbImg');
   var counter = document.getElementById('lbCounter');
 
-  // Collect all clickable images (gallery, project thumbs, ref cards)
+  // Collect all images that should open in the lightbox; skip
+  // branding visuals.
   function collectImages() {
-    var selectors = '.gallery-item img, .project-thumb img, .ref-card img';
-    document.querySelectorAll(selectors).forEach(function(img, i) {
+    document.querySelectorAll('img').forEach(function(img, i) {
+      if (
+        img.closest('.nav__logo') ||
+        img.closest('.footer__logo') ||
+        img.classList.contains('no-lightbox')
+      ) {
+        return;
+      }
       img.style.cursor = 'zoom-in';
       imgs.push(img.src);
       img.addEventListener('click', function(e) {

@@ -250,13 +250,14 @@ ul { list-style: none; }
 .hero__content {
   position: relative;
   z-index: 2;
-  text-align: left;
-  padding: 2rem 6vw 2rem 2rem;
+  text-align: right; /* move text alignment to the right side */
+  /* swap padding sides so extra space is on left instead of right */
+  padding: 2rem 2rem 2rem 6vw;
   max-width: 720px;
   width: 100%;
   align-self: flex-end;
   margin-bottom: 6rem;
-  margin-left: auto;
+  margin-right: auto; /* keep the block pushed to the right edge */
   animation: fadeUp .9s var(--ease) both;
 }
 .hero__eyebrow {
