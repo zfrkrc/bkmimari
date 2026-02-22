@@ -467,38 +467,19 @@
   var curIdx   = 0;
 
   // Tüm IMG taglarını bul ve kaydet
-  var imgElements = document.querySelectorAll('img');
-  imgElements.forEach(function(img) {
-    if (!img.closest('.nav__logo') && !img.closest('.footer__logo')) {
-      allImgs.push({
-        src: img.src,
-        elem: img
-      });
-    }
-  });
-
-  // IMG elemanlarında click dinle
-  allImgs.forEach(function(item, idx) {
-    item.elem.style.cursor = 'pointer';
-    item.elem.addEventListener('click', function(e) {
-      e.stopPropagation();
-      curIdx = idx;
-      show();
-      overlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
+  document.querySelectorAll('.project-thumb img').forEach(function(img) {
+    allImgs.push({
+      src: img.src,
+      elem: img
     });
   });
 
-  // Galeri overlay divlerine click dinle
-  document.querySelectorAll('.gallery-item__overlay').forEach(function(overlayDiv) {
-    overlayDiv.style.cursor = 'pointer';
-    overlayDiv.addEventListener('click', function(e) {
+  // project-thumb elementlerine click dinle (overlay dahil)
+  document.querySelectorAll('.project-thumb').forEach(function(thumb, idx) {
+    thumb.style.cursor = 'pointer';
+    thumb.addEventListener('click', function(e) {
       e.stopPropagation();
-      var img = overlayDiv.parentElement.querySelector('img');
-      if (!img) return;
-      var foundIdx = allImgs.findIndex(function(item) { return item.elem === img; });
-      if (foundIdx === -1) return;
-      curIdx = foundIdx;
+      curIdx = idx;
       show();
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
