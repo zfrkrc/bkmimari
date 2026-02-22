@@ -325,7 +325,6 @@ ul { list-style: none; }
 .gallery-item {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1/1;
   cursor: pointer;
   height: 0;
   padding-bottom: 100%;
