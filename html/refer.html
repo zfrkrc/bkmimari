@@ -115,22 +115,28 @@
   // Collect all images that should open in the lightbox; skip
   // branding visuals.
   function collectImages() {
-    document.querySelectorAll('img').forEach(function(img) {
+    var allImgs = document.querySelectorAll('img');
+    console.log('Total images found:', allImgs.length);
+    allImgs.forEach(function(img) {
       if (
         img.closest('.nav__logo') ||
         img.closest('.footer__logo') ||
         img.classList.contains('no-lightbox')
       ) {
+        console.log('Skipping:', img.src);
         return;
       }
       img.style.cursor = 'zoom-in';
       var index = imgs.length; // capture index before push
       imgs.push(img.src);
+      console.log('Added to lightbox [' + index + ']:', img.src);
       img.addEventListener('click', function(e) {
         e.stopPropagation();
+        console.log('Clicked image index:', index);
         open(index);
       });
     });
+    console.log('Lightbox initialized with', imgs.length, 'images');
   }
 
   function open(index) {
