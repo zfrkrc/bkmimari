@@ -17,6 +17,25 @@
 </head>
 <body>
 
+<!-- Simple lightbox on click -->
+<script>
+document.addEventListener('click', function(e) {
+  var img = e.target;
+  if (img.tagName !== 'IMG') return;
+  
+  if (img.closest('.nav__logo') || img.closest('.footer__logo')) return;
+  
+  var overlay = document.getElementById('lb');
+  var lbImg = document.getElementById('lbImg');
+  
+  if (!overlay || !lbImg) return;
+  
+  lbImg.src = img.src;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}, true);
+</script>
+
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav__inner">
