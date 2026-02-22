@@ -188,24 +188,31 @@ document.getElementById('navToggle').addEventListener('click', () => {
   var allImgs  = [];
   var curIdx   = 0;
 
-  // Tüm IMG taglarını bul
-  document.querySelectorAll('img').forEach(function(img) {
+  // Tüm IMG taglarını bul ve kaydet
+  var imgElements = document.querySelectorAll('img');
+  imgElements.forEach(function(img) {
     if (!img.closest('.nav__logo') && !img.closest('.footer__logo')) {
-      allImgs.push(img.src);
-      img.style.cursor = 'pointer';
-      img.addEventListener('click', function(e) {
-        e.stopPropagation();
-        var src = this.src;
-        curIdx = allImgs.indexOf(src);
-        show();
-        overlay.classList.add('open');
-        document.body.style.overflow = 'hidden';
+      allImgs.push({
+        src: img.src,
+        elem: img
       });
     }
   });
 
+  // IMG elemanlarında click dinle
+  allImgs.forEach(function(item, idx) {
+    item.elem.style.cursor = 'pointer';
+    item.elem.addEventListener('click', function(e) {
+      e.stopPropagation();
+      curIdx = idx;
+      show();
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
   function show() {
-    lbImg.src = allImgs[curIdx];
+    lbImg.src = allImgs[curIdx].src;
     counter.textContent = (curIdx + 1) + ' / ' + allImgs.length;
   }
 
