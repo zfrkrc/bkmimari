@@ -199,6 +199,22 @@
     });
   });
 
+  // Galeri overlay divlerine click dinle
+  document.querySelectorAll('.gallery-item__overlay').forEach(function(overlayDiv) {
+    overlayDiv.style.cursor = 'pointer';
+    overlayDiv.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var img = overlayDiv.parentElement.querySelector('img');
+      if (!img) return;
+      var foundIdx = allImgs.findIndex(function(item) { return item.elem === img; });
+      if (foundIdx === -1) return;
+      curIdx = foundIdx;
+      show();
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
   function show() {
     lbImg.src = allImgs[curIdx].src;
     counter.textContent = (curIdx + 1) + ' / ' + allImgs.length;
