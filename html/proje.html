@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projeler | BK Mimari Tasarım</title>
-  <meta name="description" content="BK Mimari Tasarım proje portföyü: İzmit Belediyesi, Kartal, Kıraç, Dönercici Celal Usta ve daha fazlası.">
+  <meta name="description" content="BK Mimari Tasarım proje portföyü: İzmit Belediyesi, Kartal, Kıraç, Dönerci Celal Usta ve daha fazlası.">
   <link rel="canonical" href="https://bkmimari.com/proje.html">
   <link rel="icon" href="assets/images/whatsapp-grsel-2025-08-25-saat-10.02.35-0e6d48e2-377x126.webp" type="image/webp">
   <link rel="stylesheet" href="bk.css">
@@ -155,27 +155,27 @@
       </div>
     </div>
 
-    <!-- Dönercici Celal Usta -->
+    <!-- Dönerci Celal Usta -->
     <div class="project-group animate-in">
       <div class="project-group__head">
-        <h2 class="project-group__title">Dönercici Celal Usta</h2>
+        <h2 class="project-group__title">Dönerci Celal Usta</h2>
         <span class="project-group__count">5 Görsel</span>
       </div>
       <div class="project-masonry project-masonry--3">
         <div class="project-thumb" style="aspect-ratio:4/3">
-          <img src="assets/images/dnerci-838x629.webp" alt="Dönercici Celal Usta" loading="lazy">
+          <img src="assets/images/dnerci-838x629.webp" alt="Dönerci Celal Usta" loading="lazy">
           <div class="project-thumb__overlay"><span class="project-thumb__label">Celal Usta</span></div>
         </div>
         <div class="project-thumb" style="aspect-ratio:4/3">
-          <img src="assets/images/donerci-celal-usta-kosuyolu-acibadem-sube-galeri-2-1200x900.webp" alt="Dönercici Celal Usta" loading="lazy">
+          <img src="assets/images/donerci-celal-usta-kosuyolu-acibadem-sube-galeri-2-1200x900.webp" alt="Dönerci Celal Usta" loading="lazy">
           <div class="project-thumb__overlay"><span class="project-thumb__label">Celal Usta</span></div>
         </div>
         <div class="project-thumb" style="aspect-ratio:4/3">
-          <img src="assets/images/donerci-celal-usta-kosuyolu-acibadem-sube-galeri-4-1200x900.webp" alt="Dönercici Celal Usta" loading="lazy">
+          <img src="assets/images/donerci-celal-usta-kosuyolu-acibadem-sube-galeri-4-1200x900.webp" alt="Dönerci Celal Usta" loading="lazy">
           <div class="project-thumb__overlay"><span class="project-thumb__label">Celal Usta</span></div>
         </div>
         <div class="project-thumb" style="aspect-ratio:4/3">
-          <img src="assets/images/donerci-celal-usta-kosuyolu-acibadem-sube-galeri-5-1200x900.webp" alt="Dönercici Celal Usta" loading="lazy">
+          <img src="assets/images/donerci-celal-usta-kosuyolu-acibadem-sube-galeri-5-1200x900.webp" alt="Dönerci Celal Usta" loading="lazy">
           <div class="project-thumb__overlay"><span class="project-thumb__label">Celal Usta</span></div>
         </div>
         <div class="project-thumb" style="aspect-ratio:4/3">
@@ -217,7 +217,7 @@
   // Collect all images that should open in the lightbox, ignoring
   // navigation/footer logos and any tagged with `no-lightbox`.
   function collectImages() {
-    document.querySelectorAll('img').forEach(function(img, i) {
+    document.querySelectorAll('img').forEach(function(img) {
       if (
         img.closest('.nav__logo') ||
         img.closest('.footer__logo') ||
@@ -226,10 +226,11 @@
         return;
       }
       img.style.cursor = 'zoom-in';
+      var index = imgs.length; // capture index before push
       imgs.push(img.src);
       img.addEventListener('click', function(e) {
         e.stopPropagation();
-        open(i);
+        open(index);
       });
     });
   }

@@ -81,8 +81,8 @@
       <a class="ref-card" href="https://www.kirac.k12.tr/" target="_blank" rel="noopener" aria-label="Kıraç Okulları">
         <img src="assets/images/images-225x225.webp" alt="Kıraç Okulları" loading="lazy">
       </a>
-      <a class="ref-card" href="https://www.donercicelalusta.com/kosuyolu-acibadem-subesi/" target="_blank" rel="noopener" aria-label="Dönercici Celal Usta">
-        <img src="assets/images/donerci-celal-usta-logo-480x98.webp" alt="Dönercici Celal Usta" loading="lazy">
+      <a class="ref-card" href="https://www.donercicelalusta.com/kosuyolu-acibadem-subesi/" target="_blank" rel="noopener" aria-label="Dönerci Celal Usta">
+        <img src="assets/images/donerci-celal-usta-logo-480x98.webp" alt="Dönerci Celal Usta" loading="lazy">
       </a>
     </div>
   </div>
@@ -115,7 +115,7 @@
   // Collect all images that should open in the lightbox; skip
   // branding visuals.
   function collectImages() {
-    document.querySelectorAll('img').forEach(function(img, i) {
+    document.querySelectorAll('img').forEach(function(img) {
       if (
         img.closest('.nav__logo') ||
         img.closest('.footer__logo') ||
@@ -124,10 +124,11 @@
         return;
       }
       img.style.cursor = 'zoom-in';
+      var index = imgs.length; // capture index before push
       imgs.push(img.src);
       img.addEventListener('click', function(e) {
         e.stopPropagation();
-        open(i);
+        open(index);
       });
     });
   }

@@ -129,7 +129,7 @@ document.getElementById('navToggle').addEventListener('click', () => {
   // `no-lightbox` helper class. This way every photo on the site
   // (gallery, project, reference etc.) will automatically work.
   function collectImages() {
-    document.querySelectorAll('img').forEach(function(img, i) {
+    document.querySelectorAll('img').forEach(function(img) {
       if (
         img.closest('.nav__logo') ||
         img.closest('.footer__logo') ||
@@ -138,10 +138,11 @@ document.getElementById('navToggle').addEventListener('click', () => {
         return; // don't lightbox branding images
       }
       img.style.cursor = 'zoom-in';
+      var index = imgs.length; // capture index before push
       imgs.push(img.src);
       img.addEventListener('click', function(e) {
         e.stopPropagation();
-        open(i);
+        open(index);
       });
     });
   }
