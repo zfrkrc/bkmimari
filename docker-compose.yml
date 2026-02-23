@@ -7,12 +7,12 @@ services:
       dockerfile: Dockerfile
     container_name: bkmimari_nextjs
     ports:
-      - "172.16.16.13:8080:80"
+      - "8080:80"
     restart: always
     environment:
       - NODE_ENV=production
       - PORT=80
-      - HOSTNAME=172.16.16.13
+      - HOSTNAME=0.0.0.0
       - MINIO_RAW_ENDPOINT=172.16.16.90
       - MINIO_PORT=6000
       - MINIO_USE_SSL=false

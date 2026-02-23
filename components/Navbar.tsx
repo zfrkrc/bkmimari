@@ -63,7 +63,12 @@ const Navbar = () => {
       </div>
       {isOpen && (
         <div
-          className="fixed inset-0 bg-transparent z-[998]"
+          style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundColor: 'transparent',
+            zIndex: 998
+          }}
           onClick={closeMenu}
         />
       )}
