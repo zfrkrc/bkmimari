@@ -14,8 +14,8 @@ export default function Home() {
     "name": "BK Mimari Tasarım",
     "description": "Mimarlık, İç Mimarlık ve Anahtar Teslim İnşaat Hizmetleri",
     "url": "https://bkmimari.com",
-    "logo": "https://minio.bkmimari.com/bkmimari/logo.webp",
-    "image": "https://minio.bkmimari.com/bkmimari/logo.webp",
+    "logo": "https://bkmimari.com/assets/images/logo.webp",
+    "image": "https://bkmimari.com/assets/images/logo.webp",
     "telephone": "+905326959856",
     "email": "info@bkmimari.com",
     "address": {

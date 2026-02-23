@@ -40,7 +40,7 @@ const Navbar = () => {
           />
         </Link>
         <ul className={`nav__links ${isOpen ? 'open' : ''}`} id="navLinks">
-          <li><Link href="/hakkimizda" className="nav__link" onClick={closeMenu}>Hakkımızda</Link></li>
+          <li><Link href="/hakkimizda" className="nav__link" onClick={closeMenu}>Hakkımızda </Link></li>
           <li><Link href="/hizmetler" className="nav__link" onClick={closeMenu}>Hizmetlerimiz</Link></li>
           <li><Link href="/projeler" className="nav__link" onClick={closeMenu}>Projeler</Link></li>
           <li><Link href="/referanslar" className="nav__link" onClick={closeMenu}>Referanslar</Link></li>

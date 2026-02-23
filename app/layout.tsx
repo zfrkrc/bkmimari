@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     creator: "@bkmimari",
   },
   icons: {
-    icon: siteConfig.ogImage,
-    shortcut: siteConfig.ogImage,
-    apple: siteConfig.ogImage,
+    icon: "/assets/images/logo.webp",
+    shortcut: "/assets/images/logo.webp",
+    apple: "/assets/images/logo.webp",
   },
   alternates: {
     canonical: "/",

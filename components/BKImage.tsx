@@ -11,43 +11,35 @@ interface BKImageProps {
     onClick?: (e: React.MouseEvent<HTMLImageElement>) => void;
 }
 
-/**
- * BKImage handles private MinIO URLs by routing them through an internal API
- * and provides a fallback to local assets if the fetch fails.
- */
 export default function BKImage({ src, alt, className, style, loading = 'lazy', onClick }: BKImageProps) {
-    // If src starts with minio URL, we prepare a local proxy URL and a static fallback
-    const isMinio = src.includes('minio.bkmimari.com');
-    const filename = isMinio ? src.split('/').pop() : null;
+    // Determine the source - be very aggressive about proxying anything related to minio
+    const isMinio = typeof src === 'string' && (
+        src.includes('minio') ||
+        src.includes('bkmimari.com')
+    ) && !src.startsWith('/api/');
 
-    // The internal API route that handles auth
+    const filename = isMinio ? src.split('/').pop() : null;
     const proxySrc = isMinio ? `/api/image/${filename}` : src;
-    // The static fallback in public/assets/images
     const fallbackSrc = isMinio ? `/assets/images/${filename}` : src;
 
-    const [currentSrc, setCurrentSrc] = useState(proxySrc);
-    const [hasError, setHasError] = useState(false);
+    const [imgSrc, setImgSrc] = useState(proxySrc);
 
-    // Sync internal state with external prop change
     useEffect(() => {
-        const isMinioNew = src.includes('minio.bkmimari.com');
-        const filenameNew = isMinioNew ? src.split('/').pop() : null;
-        setCurrentSrc(isMinioNew ? `/api/image/${filenameNew}` : src);
-        setHasError(false);
-    }, [src]);
+        setImgSrc(proxySrc);
+    }, [proxySrc]);
 
     const handleError = () => {
-        // If the proxy fails, we try the local static assets
-        if (!hasError && isMinio) {
-            console.warn(`MinIO proxy failed for ${filename}, trying local fallback: ${fallbackSrc}`);
-            setCurrentSrc(fallbackSrc);
-            setHasError(true);
+        if (isMinio && imgSrc !== fallbackSrc) {
+            console.warn(`BKImage: Switching to local fallback for ${filename}`);
+            setImgSrc(fallbackSrc);
+        } else {
+            console.error(`BKImage: Permanent failure for ${src}`);
         }
     };
 
     return (
         <img
-            src={currentSrc}
+            src={imgSrc}
             alt={alt}
             className={className}
             style={style}

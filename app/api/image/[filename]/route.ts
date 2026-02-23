@@ -1,35 +1,29 @@
 import { NextRequest, NextResponse } from 'next/server';
 import minioClient from '@/lib/minio';
+import { Readable } from 'stream';
 
 export async function GET(
     request: NextRequest,
-    { params }: { params: Promise<{ filename: string }> }
+    context: { params: Promise<{ filename: string }> }
 ) {
-    const { filename } = await params;
+    const { filename } = await context.params;
     const bucket = process.env.MINIO_BUCKET || 'bkmimari';
 
     try {
         const dataStream = await minioClient.getObject(bucket, filename);
 
-        // Convert readable stream to a format Next.js can return
-        // We can use the native ReadableStream
-        const stream = new ReadableStream({
-            async start(controller) {
-                dataStream.on('data', (chunk) => controller.enqueue(chunk));
-                dataStream.on('end', () => controller.close());
-                dataStream.on('error', (err) => controller.error(err));
-            },
-        });
+        // Convert Node.js Readable to Web ReadableStream (Next.js expectation)
+        const webStream = Readable.toWeb(dataStream);
 
-        return new NextResponse(stream, {
+        return new NextResponse(webStream as any, {
             headers: {
                 'Content-Type': getContentType(filename),
                 'Cache-Control': 'public, max-age=31536000, immutable',
             },
         });
-    } catch (error) {
-        console.error(`Error fetching image ${filename} from MinIO:`, error);
-        return new NextResponse('Image not found', { status: 404 });
+    } catch (error: any) {
+        console.error(`Error proxying ${filename} from MinIO:`, error.message);
+        return new NextResponse(`Error: ${error.message}`, { status: error.code === 'NoSuchKey' ? 404 : 500 });
     }
 }
 
