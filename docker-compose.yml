@@ -12,7 +12,7 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=80
-      - HOSTNAME=0.0.0.0
+      - HOSTNAME=172.16.16.13
       - MINIO_RAW_ENDPOINT=172.16.16.90
       - MINIO_PORT=6000
       - MINIO_USE_SSL=false
