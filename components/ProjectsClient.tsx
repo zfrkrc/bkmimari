@@ -37,12 +37,13 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
                                 <h2 className="project-group__title">{group.title}</h2>
                                 <span className="project-group__count">{group.images.length} Görsel</span>
                             </div>
-                            <div className={`project-masonry project-masonry--${group.title === 'Kartal' ? '2' : '3'}`} style={group.title === 'Kartal' ? { gridTemplateColumns: 'repeat(4, 1fr)' } : {}}>
+                            {/* Standardized 4-column sharp grid for all projects */}
+                            <div className="project-masonry" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px' }}>
                                 {group.images.map((img, imgIdx) => (
                                     <div
                                         key={imgIdx}
                                         className="project-thumb"
-                                        style={{ aspectRatio: group.title === 'Kartal' ? '1/1.1' : '4/3' }}
+                                        style={{ aspectRatio: '1/1', cursor: 'pointer' }}
                                         onClick={() => openLightbox(img)}
                                     >
                                         <BKImage src={img} alt={group.title} />
