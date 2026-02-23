@@ -19,7 +19,9 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
 
     const openLightbox = (imgSrc: string) => {
         const index = allImages.indexOf(imgSrc);
-        setLightbox({ isOpen: true, index });
+        if (index !== -1) {
+            setLightbox({ isOpen: true, index });
+        }
     };
 
     const closeLightbox = () => setLightbox({ ...lightbox, isOpen: false });
@@ -37,17 +39,25 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
                                 <h2 className="project-group__title">{group.title}</h2>
                                 <span className="project-group__count">{group.images.length} Görsel</span>
                             </div>
-                            {/* Standardized 4-column sharp grid for all projects */}
                             <div className="project-masonry" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px' }}>
                                 {group.images.map((img, imgIdx) => (
                                     <div
                                         key={imgIdx}
                                         className="project-thumb"
-                                        style={{ aspectRatio: '1/1', cursor: 'pointer' }}
+                                        style={{ aspectRatio: '1/1', cursor: 'pointer', position: 'relative', overflow: 'hidden' }}
                                         onClick={() => openLightbox(img)}
                                     >
-                                        <BKImage src={img} alt={group.title} />
-                                        <div className="project-thumb__overlay">
+                                        {/* Pass onClick directly to BKImage for better capture */}
+                                        <BKImage
+                                            src={img}
+                                            alt={group.title}
+                                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                openLightbox(img);
+                                            }}
+                                        />
+                                        <div className="project-thumb__overlay" style={{ pointerEvents: 'none' }}>
                                             <span className="project-thumb__label">{group.title}</span>
                                         </div>
                                     </div>
