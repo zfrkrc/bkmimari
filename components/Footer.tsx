@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BKImage from './BKImage';
 
 const Footer = () => {
     return (
@@ -6,7 +7,7 @@ const Footer = () => {
             <div className="container">
                 <div className="footer__inner">
                     <div className="footer__logo">
-                        <img
+                        <BKImage
                             src="https://minio.bkmimari.com/bkmimari/logo.webp"
                             alt="BK Mimari"
                             style={{ height: '32px', width: 'auto' }}

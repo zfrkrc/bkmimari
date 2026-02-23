@@ -1,3 +1,5 @@
+import BKImage from '@/components/BKImage';
+
 export const metadata = {
     title: "Referanslarımız",
     description: "Çevre ve Şehircilik Bakanlığı, İzmit Belediyesi ve Luxera GYO gibi lider kurumsal ortaklarımızla gerçekleştirdiğimiz başarılı projeler.",
@@ -25,7 +27,7 @@ const references = [
 
 export default function References() {
     return (
-        <main>
+        <main className="fade-in">
             <section className="section section--cream" style={{ paddingTop: 'calc(7rem + 72px)' }}>
                 <div className="container">
                     <div className="refs-header animate-in">
@@ -39,13 +41,13 @@ export default function References() {
                         {references.map((ref, index) => (
                             <a
                                 key={index}
-                                className="ref-card"
+                                className="ref-card animate-in"
                                 href={ref.url}
                                 target="_blank"
                                 rel="noopener"
                                 aria-label={ref.name}
                             >
-                                <img src={ref.img} alt={ref.name} loading="lazy" />
+                                <BKImage src={ref.img} alt={ref.name} />
                             </a>
                         ))}
                     </div>

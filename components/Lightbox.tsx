@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import BKImage from './BKImage';
 
 interface LightboxProps {
     isOpen: boolean;
@@ -29,11 +30,11 @@ const Lightbox = ({ isOpen, onClose, images, currentIndex, onPrev, onNext }: Lig
         <div className="lb-overlay open" onClick={onClose}>
             <button className="lb-close" onClick={onClose}>&times;</button>
             <button className="lb-prev" onClick={(e) => { e.stopPropagation(); onPrev(); }}>&#8249;</button>
-            <img
-                id="lbImg"
+            <BKImage
                 src={images[currentIndex]}
                 alt=""
-                onClick={(e) => e.stopPropagation()}
+                style={{ cursor: 'default' }}
+                onClick={(e: React.MouseEvent) => e.stopPropagation()}
             />
             <button className="lb-next" onClick={(e) => { e.stopPropagation(); onNext(); }}>&#8250;</button>
             <div className="lb-counter">{currentIndex + 1} / {images.length}</div>

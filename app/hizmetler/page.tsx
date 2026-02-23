@@ -22,7 +22,7 @@ const services = [
 
 export default function Services() {
     return (
-        <main>
+        <main className="fade-in">
             <section className="section section--cream" style={{ paddingTop: 'calc(7rem + 72px)' }}>
                 <div className="container">
                     <div className="services-header animate-in">

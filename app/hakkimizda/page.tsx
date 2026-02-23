@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BKImage from '@/components/BKImage';
 
 export const metadata = {
     title: "Hakkımızda",
@@ -10,10 +11,10 @@ export const metadata = {
 
 export default function About() {
     return (
-        <main>
+        <main className="fade-in">
             <div className="about-split">
                 <div className="about-split__img">
-                    <img src="https://minio.bkmimari.com/bkmimari/8-1200x1599.webp" alt="BK Mimari — Barçın Karaca" />
+                    <BKImage src="https://minio.bkmimari.com/bkmimari/8-1200x1599.webp" alt="BK Mimari — Barçın Karaca" />
                 </div>
                 <div className="about-split__content animate-in">
                     <span className="label">18 Yıllık Tecrübe</span>

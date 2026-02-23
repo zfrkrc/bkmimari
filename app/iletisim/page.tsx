@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function Contact() {
     return (
-        <main>
+        <main className="fade-in">
             <div style={{ paddingTop: '72px' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', padding: '5rem 0 0' }}>

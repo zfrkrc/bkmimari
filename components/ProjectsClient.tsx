@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Lightbox from '@/components/Lightbox';
+import BKImage from '@/components/BKImage';
 
 interface ProjectGroup {
     title: string;
@@ -28,7 +29,7 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
 
     return (
         <>
-            <section className="projects-grid-wrap">
+            <section className="projects-grid-wrap fade-in">
                 <div className="container">
                     {projects.map((group, groupIdx) => (
                         <div key={groupIdx} className="project-group animate-in">
@@ -44,7 +45,7 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
                                         style={{ aspectRatio: group.title === 'Kartal' ? '1/1.1' : '4/3' }}
                                         onClick={() => openLightbox(img)}
                                     >
-                                        <img src={img} alt={group.title} loading="lazy" />
+                                        <BKImage src={img} alt={group.title} />
                                         <div className="project-thumb__overlay">
                                             <span className="project-thumb__label">{group.title}</span>
                                         </div>

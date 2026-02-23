@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import BKImage from './BKImage';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,7 +33,7 @@ const Navbar = () => {
     <nav className={`nav ${isScrolled ? 'scrolled' : ''}`} id="nav">
       <div className="nav__inner">
         <Link href="/" className="nav__logo" onClick={closeMenu}>
-          <img
+          <BKImage
             src="https://minio.bkmimari.com/bkmimari/logo.webp"
             alt="BK Mimari Tasarım"
             style={{ height: '44px', width: 'auto' }}

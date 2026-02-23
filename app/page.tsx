@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BKImage from '@/components/BKImage';
 
 export const metadata = {
   title: "Ana Sayfa",
@@ -34,7 +35,7 @@ export default function Home() {
   };
 
   return (
-    <main>
+    <main className="fade-in">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -65,25 +66,25 @@ export default function Home() {
       <section className="gallery-section">
         <div className="container">
           <span className="label" style={{ display: 'block', textAlign: 'center' }}>Seçkin Çalışmalar</span>
-          <h2 className="h2 h2--light" style={{ textAlign: 'center', fontWeight: 300, marginTop: '.5rem' }}>Projelerimizden Kareler</h2>
+          <h2 className="h2 h2--light" style={{ textAlign: 'center', marginTop: '.5rem' }}>Projelerimizden Kareler</h2>
           <span className="gold-line gold-line--center"></span>
         </div>
         <div className="container-wide" style={{ marginTop: '3rem' }}>
           <div className="gallery-grid">
             <div className="gallery-item">
-              <img src="https://minio.bkmimari.com/bkmimari/kirac-838x629.webp" alt="BK Mimari Proje" loading="lazy" />
+              <BKImage src="https://minio.bkmimari.com/bkmimari/kirac-838x629.webp" alt="BK Mimari Proje" />
               <div className="gallery-item__overlay"><div className="gallery-item__icon">+</div></div>
             </div>
             <div className="gallery-item">
-              <img src="https://minio.bkmimari.com/bkmimari/whatsapp-grsel-2025-09-15-saat-20.06.37-4d0eb087-838x629.webp" alt="BK Mimari Proje" loading="lazy" />
+              <BKImage src="https://minio.bkmimari.com/bkmimari/whatsapp-grsel-2025-09-15-saat-20.06.37-4d0eb087-838x629.webp" alt="BK Mimari Proje" />
               <div className="gallery-item__overlay"><div className="gallery-item__icon">+</div></div>
             </div>
             <div className="gallery-item">
-              <img src="https://minio.bkmimari.com/bkmimari/izmit-838x523.webp" alt="BK Mimari Proje" loading="lazy" />
+              <BKImage src="https://minio.bkmimari.com/bkmimari/izmit-838x523.webp" alt="BK Mimari Proje" />
               <div className="gallery-item__overlay"><div className="gallery-item__icon">+</div></div>
             </div>
             <div className="gallery-item">
-              <img src="https://minio.bkmimari.com/bkmimari/dnerci-838x629.webp" alt="BK Mimari Proje" loading="lazy" />
+              <BKImage src="https://minio.bkmimari.com/bkmimari/dnerci-838x629.webp" alt="BK Mimari Proje" />
               <div className="gallery-item__overlay"><div className="gallery-item__icon">+</div></div>
             </div>
           </div>
