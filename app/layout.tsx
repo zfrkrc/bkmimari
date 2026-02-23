@@ -8,7 +8,7 @@ const siteConfig = {
   title: "BK Mimari Tasarım — Mimarlık & İç Mimarlık | İstanbul",
   description: "Acıbadem-Kadıköy merkezli BK Mimari Tasarım; villa tasarımı, ofis dekorasyonu, 3D görselleştirme ve anahtar teslim inşaat hizmetleri. 18 yıl, 500.000 m² deneyim.",
   url: "https://bkmimari.com",
-  ogImage: "/assets/images/whatsapp-grsel-2025-08-25-saat-10.02.35-0e6d48e2-377x126.webp",
+  ogImage: "/assets/images/logo.webp",
   keywords: ["BK Mimari", "mimarlık ofisi Acıbadem", "iç mimarlık Kadıköy", "İstanbul mimari tasarım", "villa tasarımı", "anahtar teslim inşaat"],
 };
 

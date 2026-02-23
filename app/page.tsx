@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: "Ana Sayfa",
+  description: "BK Mimari Tasarım — Mimarlık, İç Mimarlık ve Anahtar Teslim İnşaat Hizmetleri.",
+};
+
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -7,8 +12,8 @@ export default function Home() {
     "name": "BK Mimari Tasarım",
     "description": "Mimarlık, İç Mimarlık ve Anahtar Teslim İnşaat Hizmetleri",
     "url": "https://bkmimari.com",
-    "logo": "https://bkmimari.com/assets/images/whatsapp-grsel-2025-08-25-saat-10.02.35-0e6d48e2-377x126.webp",
-    "image": "https://bkmimari.com/assets/images/whatsapp-grsel-2025-08-25-saat-10.02.35-0e6d48e2-377x126.webp",
+    "logo": "https://bkmimari.com/assets/images/logo.webp",
+    "image": "https://bkmimari.com/assets/images/logo.webp",
     "telephone": "+905326959856",
     "email": "info@bkmimari.com",
     "address": {

@@ -32,9 +32,9 @@ const Navbar = () => {
     <nav className={`nav ${isScrolled ? 'scrolled' : ''}`} id="nav">
       <div className="nav__inner">
         <Link href="/" className="nav__logo" onClick={closeMenu}>
-          <img 
-            src="/assets/images/whatsapp-grsel-2025-08-25-saat-10.02.35-0e6d48e2-377x126.webp" 
-            alt="BK Mimari Tasarım" 
+          <img
+            src="/assets/images/logo.webp"
+            alt="BK Mimari Tasarım"
             style={{ height: '44px', width: 'auto' }}
           />
         </Link>
@@ -48,9 +48,9 @@ const Navbar = () => {
         <div className="nav__actions">
           <a href="tel:05326959856" className="nav__icon" aria-label="Telefon">📞</a>
           <a href="mailto:info@bkmimari.com" className="nav__icon" aria-label="E-posta">✉</a>
-          <button 
-            className="nav__toggle" 
-            id="navToggle" 
+          <button
+            className="nav__toggle"
+            id="navToggle"
             aria-label="Menü"
             onClick={toggleMenu}
           >
@@ -61,8 +61,8 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div 
-          className="fixed inset-0 bg-transparent z-[998]" 
+        <div
+          className="fixed inset-0 bg-transparent z-[998]"
           onClick={closeMenu}
         />
       )}

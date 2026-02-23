@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="footer__inner">
                     <div className="footer__logo">
                         <img
-                            src="/assets/images/whatsapp-grsel-2025-08-25-saat-10.02.35-0e6d48e2-377x126.webp"
+                            src="/assets/images/logo.webp"
                             alt="BK Mimari"
                             style={{ height: '32px', width: 'auto' }}
                         />
