@@ -13,6 +13,13 @@ services:
       - NODE_ENV=production
       - PORT=80
       - HOSTNAME=0.0.0.0
+      - MINIO_RAW_ENDPOINT=172.16.16.90
+      - MINIO_PORT=6000
+      - MINIO_USE_SSL=false
+      - MINIO_PUBLIC_URL=https://minio.bkmimari.com
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=818wlxjncI6J80
+      - MINIO_BUCKET=bkmimari
     healthcheck:
       test: [ "CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:80/health" ]
       interval: 30s

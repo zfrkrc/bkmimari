@@ -13,7 +13,7 @@ export default function About() {
         <main>
             <div className="about-split">
                 <div className="about-split__img">
-                    <img src="/assets/images/8-1200x1599.webp" alt="BK Mimari — Barçın Karaca" />
+                    <img src="https://minio.bkmimari.com/bkmimari/8-1200x1599.webp" alt="BK Mimari — Barçın Karaca" />
                 </div>
                 <div className="about-split__content animate-in">
                     <span className="label">18 Yıllık Tecrübe</span>

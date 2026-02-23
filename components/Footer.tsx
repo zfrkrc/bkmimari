@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="footer__inner">
                     <div className="footer__logo">
                         <img
-                            src="/assets/images/logo.webp"
+                            src="https://minio.bkmimari.com/bkmimari/logo.webp"
                             alt="BK Mimari"
                             style={{ height: '32px', width: 'auto' }}
                         />

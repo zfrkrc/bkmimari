@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="nav__inner">
         <Link href="/" className="nav__logo" onClick={closeMenu}>
           <img
-            src="/assets/images/logo.webp"
+            src="https://minio.bkmimari.com/bkmimari/logo.webp"
             alt="BK Mimari Tasarım"
             style={{ height: '44px', width: 'auto' }}
           />

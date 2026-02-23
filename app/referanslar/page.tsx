@@ -7,20 +7,20 @@ export const metadata = {
 };
 
 const references = [
-    { name: "Çevre ve Şehircilik Bakanlığı", url: "https://www.csb.gov.tr/", img: "/assets/images/cevre-318x100.webp" },
-    { name: "EPP", url: "https://epp.com.tr/", img: "/assets/images/epp-2441x1006.webp" },
-    { name: "EPAS Grup", url: "https://epasgrup.com/", img: "/assets/images/epas-grup-2021-logo-300x67-1-300x94.webp" },
-    { name: "İzmit Belediyesi", url: "https://izmit.bel.tr/", img: "/assets/images/izmit-600x213.webp" },
-    { name: "Luxera GYO", url: "https://luxera.com.tr/", img: "/assets/images/luxera-gyo-logo-lacivertt.pdf-315x146.webp" },
-    { name: "Halil Avcı", url: "https://www.halilavci.com/tr/", img: "/assets/images/halil-avci-logo-267x110.webp" },
-    { name: "Yeni Koza", url: "https://www.yenikoza.com/", img: "/assets/images/yenikoza-178x84.webp" },
-    { name: "Aramis Yapı", url: "https://aramisyapi.com.tr/", img: "/assets/images/aramis-yapilogo-1-282x87.webp" },
-    { name: "Zeytin Arası", url: "https://www.zeytinarasi.com/", img: "/assets/images/logo-beya-yesil-217x105.webp" },
-    { name: "Hasan Usta Kebap", url: "https://hasanustakebap.com/", img: "/assets/images/kirmizi-logo-1024x538.png.webp" },
-    { name: "Oto İsmail", url: "https://www.otoismail.com.tr/", img: "/assets/images/images-1-396x127.webp" },
-    { name: "Berko İlaç", url: "https://berkoilac.com.tr/", img: "/assets/images/berkoilac-sy-rgb-1-3508x1331.webp" },
-    { name: "Kıraç Okulları", url: "https://www.kirac.k12.tr/", img: "/assets/images/images-225x225.webp" },
-    { name: "Dönerci Celal Usta", url: "https://www.donercicelalusta.com/kosuyolu-acibadem-subesi/", img: "/assets/images/donerci-celal-usta-logo-480x98.webp" },
+    { name: "Çevre ve Şehircilik Bakanlığı", url: "https://www.csb.gov.tr/", img: "https://minio.bkmimari.com/bkmimari/cevre-318x100.webp" },
+    { name: "EPP", url: "https://epp.com.tr/", img: "https://minio.bkmimari.com/bkmimari/epp-2441x1006.webp" },
+    { name: "EPAS Grup", url: "https://epasgrup.com/", img: "https://minio.bkmimari.com/bkmimari/epas-grup-2021-logo-300x67-1-300x94.webp" },
+    { name: "İzmit Belediyesi", url: "https://izmit.bel.tr/", img: "https://minio.bkmimari.com/bkmimari/izmit-600x213.webp" },
+    { name: "Luxera GYO", url: "https://luxera.com.tr/", img: "https://minio.bkmimari.com/bkmimari/luxera-gyo-logo-lacivertt.pdf-315x146.webp" },
+    { name: "Halil Avcı", url: "https://www.halilavci.com/tr/", img: "https://minio.bkmimari.com/bkmimari/halil-avci-logo-267x110.webp" },
+    { name: "Yeni Koza", url: "https://www.yenikoza.com/", img: "https://minio.bkmimari.com/bkmimari/yenikoza-178x84.webp" },
+    { name: "Aramis Yapı", url: "https://aramisyapi.com.tr/", img: "https://minio.bkmimari.com/bkmimari/aramis-yapilogo-1-282x87.webp" },
+    { name: "Zeytin Arası", url: "https://www.zeytinarasi.com/", img: "https://minio.bkmimari.com/bkmimari/logo-beya-yesil-217x105.webp" },
+    { name: "Hasan Usta Kebap", url: "https://hasanustakebap.com/", img: "https://minio.bkmimari.com/bkmimari/kirmizi-logo-1024x538.png.webp" },
+    { name: "Oto İsmail", url: "https://www.otoismail.com.tr/", img: "https://minio.bkmimari.com/bkmimari/images-1-396x127.webp" },
+    { name: "Berko İlaç", url: "https://berkoilac.com.tr/", img: "https://minio.bkmimari.com/bkmimari/berkoilac-sy-rgb-1-3508x1331.webp" },
+    { name: "Kıraç Okulları", url: "https://www.kirac.k12.tr/", img: "https://minio.bkmimari.com/bkmimari/images-225x225.webp" },
+    { name: "Dönerci Celal Usta", url: "https://www.donercicelalusta.com/kosuyolu-acibadem-subesi/", img: "https://minio.bkmimari.com/bkmimari/donerci-celal-usta-logo-480x98.webp" },
 ];
 
 export default function References() {

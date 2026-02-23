@@ -12,8 +12,8 @@ export default function Home() {
     "name": "BK Mimari Tasarım",
     "description": "Mimarlık, İç Mimarlık ve Anahtar Teslim İnşaat Hizmetleri",
     "url": "https://bkmimari.com",
-    "logo": "https://bkmimari.com/assets/images/logo.webp",
-    "image": "https://bkmimari.com/assets/images/logo.webp",
+    "logo": "https://minio.bkmimari.com/bkmimari/logo.webp",
+    "image": "https://minio.bkmimari.com/bkmimari/logo.webp",
     "telephone": "+905326959856",
     "email": "info@bkmimari.com",
     "address": {
@@ -71,19 +71,19 @@ export default function Home() {
         <div className="container-wide" style={{ marginTop: '3rem' }}>
           <div className="gallery-grid">
             <div className="gallery-item">
-              <img src="/assets/images/kirac-838x629.webp" alt="BK Mimari Proje" loading="lazy" />
+              <img src="https://minio.bkmimari.com/bkmimari/kirac-838x629.webp" alt="BK Mimari Proje" loading="lazy" />
               <div className="gallery-item__overlay"><div className="gallery-item__icon">+</div></div>
             </div>
             <div className="gallery-item">
-              <img src="/assets/images/whatsapp-grsel-2025-09-15-saat-20.06.37-4d0eb087-838x629.webp" alt="BK Mimari Proje" loading="lazy" />
+              <img src="https://minio.bkmimari.com/bkmimari/whatsapp-grsel-2025-09-15-saat-20.06.37-4d0eb087-838x629.webp" alt="BK Mimari Proje" loading="lazy" />
               <div className="gallery-item__overlay"><div className="gallery-item__icon">+</div></div>
             </div>
             <div className="gallery-item">
-              <img src="/assets/images/izmit-838x523.webp" alt="BK Mimari Proje" loading="lazy" />
+              <img src="https://minio.bkmimari.com/bkmimari/izmit-838x523.webp" alt="BK Mimari Proje" loading="lazy" />
               <div className="gallery-item__overlay"><div className="gallery-item__icon">+</div></div>
             </div>
             <div className="gallery-item">
-              <img src="/assets/images/dnerci-838x629.webp" alt="BK Mimari Proje" loading="lazy" />
+              <img src="https://minio.bkmimari.com/bkmimari/dnerci-838x629.webp" alt="BK Mimari Proje" loading="lazy" />
               <div className="gallery-item__overlay"><div className="gallery-item__icon">+</div></div>
             </div>
           </div>
