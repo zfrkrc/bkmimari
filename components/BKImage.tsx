@@ -12,27 +12,34 @@ interface BKImageProps {
 }
 
 /**
- * BKImage handles MinIO URLs with a transparent fallback to local assets
- * if the external URL fails to load.
+ * BKImage handles private MinIO URLs by routing them through an internal API
+ * and provides a fallback to local assets if the fetch fails.
  */
 export default function BKImage({ src, alt, className, style, loading = 'lazy', onClick }: BKImageProps) {
-    // If src starts with minio URL, we prepare a fallback
+    // If src starts with minio URL, we prepare a local proxy URL and a static fallback
     const isMinio = src.includes('minio.bkmimari.com');
     const filename = isMinio ? src.split('/').pop() : null;
-    const fallbackSrc = filename ? `/assets/images/${filename}` : src;
 
-    const [currentSrc, setCurrentSrc] = useState(src);
+    // The internal API route that handles auth
+    const proxySrc = isMinio ? `/api/image/${filename}` : src;
+    // The static fallback in public/assets/images
+    const fallbackSrc = isMinio ? `/assets/images/${filename}` : src;
+
+    const [currentSrc, setCurrentSrc] = useState(proxySrc);
     const [hasError, setHasError] = useState(false);
 
-    // Sync internal state with external prop change (essential for lightboxes)
+    // Sync internal state with external prop change
     useEffect(() => {
-        setCurrentSrc(src);
+        const isMinioNew = src.includes('minio.bkmimari.com');
+        const filenameNew = isMinioNew ? src.split('/').pop() : null;
+        setCurrentSrc(isMinioNew ? `/api/image/${filenameNew}` : src);
         setHasError(false);
     }, [src]);
 
     const handleError = () => {
+        // If the proxy fails, we try the local static assets
         if (!hasError && isMinio) {
-            console.warn(`MinIO image failed to load, falling back to local: ${fallbackSrc}`);
+            console.warn(`MinIO proxy failed for ${filename}, trying local fallback: ${fallbackSrc}`);
             setCurrentSrc(fallbackSrc);
             setHasError(true);
         }
