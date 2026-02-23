@@ -33,8 +33,11 @@ const Lightbox = ({ isOpen, onClose, images, currentIndex, onPrev, onNext }: Lig
             <BKImage
                 src={images[currentIndex]}
                 alt=""
-                style={{ cursor: 'default' }}
-                onClick={(e: React.MouseEvent) => e.stopPropagation()}
+                style={{ cursor: 'pointer' }}
+                onClick={(e: React.MouseEvent) => {
+                    e.stopPropagation();
+                    onNext();
+                }}
             />
             <button className="lb-next" onClick={(e) => { e.stopPropagation(); onNext(); }}>&#8250;</button>
             <div className="lb-counter">{currentIndex + 1} / {images.length}</div>

@@ -7,19 +7,21 @@ services:
       dockerfile: Dockerfile
     container_name: bkmimari_nextjs
     ports:
-      - "172.16.16.13:8080:80"
+      - "${APP_PORT:-8080}:80"
     restart: always
+    env_file:
+      - .env
     environment:
       - NODE_ENV=production
       - PORT=80
-      - HOSTNAME=172.16.16.13
-      - MINIO_RAW_ENDPOINT=172.16.16.90
-      - MINIO_PORT=6000
-      - MINIO_USE_SSL=false
-      - MINIO_PUBLIC_URL=https://minio.bkmimari.com
-      - MINIO_ACCESS_KEY=minioadmin
-      - MINIO_SECRET_KEY=818wlxjncI6J80
-      - MINIO_BUCKET=bkmimari
+      - HOSTNAME=${HOSTNAME:-0.0.0.0}
+      - MINIO_RAW_ENDPOINT=${MINIO_RAW_ENDPOINT}
+      - MINIO_PORT=${MINIO_PORT}
+      - MINIO_USE_SSL=${MINIO_USE_SSL}
+      - MINIO_PUBLIC_URL=${MINIO_PUBLIC_URL}
+      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+      - MINIO_BUCKET=${MINIO_BUCKET}
     healthcheck:
       test: [ "CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:80/health" ]
       interval: 30s
