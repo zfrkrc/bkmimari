@@ -14,20 +14,19 @@ interface ProjectsClientProps {
 }
 
 export default function ProjectsClient({ projects }: ProjectsClientProps) {
-    const allImages = projects.flatMap(p => p.images);
+    // Current group of images being viewed
+    const [activeImages, setActiveImages] = useState<string[]>([]);
     const [lightbox, setLightbox] = useState({ isOpen: false, index: 0 });
 
-    const openLightbox = (imgSrc: string) => {
-        const index = allImages.indexOf(imgSrc);
-        if (index !== -1) {
-            setLightbox({ isOpen: true, index });
-        }
+    const openLightbox = (groupImages: string[], index: number) => {
+        setActiveImages(groupImages);
+        setLightbox({ isOpen: true, index });
     };
 
     const closeLightbox = () => setLightbox({ ...lightbox, isOpen: false });
 
-    const nextImage = () => setLightbox({ ...lightbox, index: (lightbox.index + 1) % allImages.length });
-    const prevImage = () => setLightbox({ ...lightbox, index: (lightbox.index - 1 + allImages.length) % allImages.length });
+    const nextImage = () => setLightbox({ ...lightbox, index: (lightbox.index + 1) % activeImages.length });
+    const prevImage = () => setLightbox({ ...lightbox, index: (lightbox.index - 1 + activeImages.length) % activeImages.length });
 
     return (
         <>
@@ -45,16 +44,15 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
                                         key={imgIdx}
                                         className="project-thumb"
                                         style={{ aspectRatio: '1/1', cursor: 'pointer', position: 'relative', overflow: 'hidden' }}
-                                        onClick={() => openLightbox(img)}
+                                        onClick={() => openLightbox(group.images, imgIdx)}
                                     >
-                                        {/* Pass onClick directly to BKImage for better capture */}
                                         <BKImage
                                             src={img}
                                             alt={group.title}
                                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                             onClick={(e) => {
                                                 e.stopPropagation();
-                                                openLightbox(img);
+                                                openLightbox(group.images, imgIdx);
                                             }}
                                         />
                                         <div className="project-thumb__overlay" style={{ pointerEvents: 'none' }}>
@@ -71,7 +69,7 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
             <Lightbox
                 isOpen={lightbox.isOpen}
                 onClose={closeLightbox}
-                images={allImages}
+                images={activeImages}
                 currentIndex={lightbox.index}
                 onNext={nextImage}
                 onPrev={prevImage}

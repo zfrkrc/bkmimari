@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface BKImageProps {
     src: string;
@@ -23,6 +23,12 @@ export default function BKImage({ src, alt, className, style, loading = 'lazy', 
 
     const [currentSrc, setCurrentSrc] = useState(src);
     const [hasError, setHasError] = useState(false);
+
+    // Sync internal state with external prop change (essential for lightboxes)
+    useEffect(() => {
+        setCurrentSrc(src);
+        setHasError(false);
+    }, [src]);
 
     const handleError = () => {
         if (!hasError && isMinio) {

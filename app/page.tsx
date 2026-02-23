@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import BKImage from '@/components/BKImage';
+import HomeGallery from '@/components/HomeGallery';
 
 export const metadata = {
   title: "Ana Sayfa",
@@ -70,24 +71,7 @@ export default function Home() {
           <span className="gold-line gold-line--center"></span>
         </div>
         <div className="container-wide" style={{ marginTop: '3rem' }}>
-          <div className="gallery-grid">
-            <div className="gallery-item">
-              <BKImage src="https://minio.bkmimari.com/bkmimari/kirac-838x629.webp" alt="BK Mimari Proje" />
-              <div className="gallery-item__overlay"><div className="gallery-item__icon">+</div></div>
-            </div>
-            <div className="gallery-item">
-              <BKImage src="https://minio.bkmimari.com/bkmimari/whatsapp-grsel-2025-09-15-saat-20.06.37-4d0eb087-838x629.webp" alt="BK Mimari Proje" />
-              <div className="gallery-item__overlay"><div className="gallery-item__icon">+</div></div>
-            </div>
-            <div className="gallery-item">
-              <BKImage src="https://minio.bkmimari.com/bkmimari/izmit-838x523.webp" alt="BK Mimari Proje" />
-              <div className="gallery-item__overlay"><div className="gallery-item__icon">+</div></div>
-            </div>
-            <div className="gallery-item">
-              <BKImage src="https://minio.bkmimari.com/bkmimari/dnerci-838x629.webp" alt="BK Mimari Proje" />
-              <div className="gallery-item__overlay"><div className="gallery-item__icon">+</div></div>
-            </div>
-          </div>
+          <HomeGallery />
         </div>
         <div className="container" style={{ textAlign: 'center', marginTop: '3rem' }}>
           <Link href="/projeler" className="btn btn--gold">Tüm Projeleri Gör</Link>
