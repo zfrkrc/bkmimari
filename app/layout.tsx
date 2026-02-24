@@ -70,6 +70,12 @@ export default function RootLayout({
     <html lang="tr">
       <body className="antialiased">
         <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="479f7920-750f-4420-a46a-d1915ac07132"
+          strategy="beforeInteractive"
+        />
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-JT8FSSMHLK"
           strategy="afterInteractive"
         />
