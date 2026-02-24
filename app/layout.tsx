@@ -68,23 +68,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <head>
-        <>
-          <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-JT8FSSMHLK"
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-JT8FSSMHLK');
-            `}
-          </Script>
-        </>
-      </head>
       <body className="antialiased">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-JT8FSSMHLK"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JT8FSSMHLK');
+          `}
+        </Script>
         <Navbar />
         {children}
         <Footer />
