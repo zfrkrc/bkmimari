@@ -54,7 +54,7 @@ export default function Home() {
         <div className="hero__content">
           <p className="hero__eyebrow">Acıbadem · Kadıköy · İstanbul</p>
           <h1 className="hero__title">BK MİMARİ<br /><em>TASARIM</em></h1>
-          <p className="hero__sub">Mimarlık, İç Mimarlık ve Anahtar Teslim İnşaat Hizmetleri<br />— 18 Yıllık Deneyim</p>
+          <p className="hero__sub">Mimarlık, İç Mimarlık ve Anahtar Teslim İnşaat Hizmetleri<br />18 Yıllık Deneyim</p>
           <div className="hero__btns">
             <Link href="/projeler" className="btn btn--gold">Projelerimiz</Link>
             <Link href="/iletisim" className="btn btn--outline">İletişim</Link>
