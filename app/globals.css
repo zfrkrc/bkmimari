@@ -110,20 +110,22 @@ ul {
 
 .h1 {
   font-family: var(--ff-h);
-  font-size: clamp(3rem, 6vw, 5.5rem);
-  font-weight: 300;
-  line-height: 1.05;
-  color: var(--navy);
-  text-transform: uppercase;
-}
-
-.h2 {
-  font-family: var(--ff-h);
-  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
   font-weight: 400;
   line-height: 1.1;
   color: var(--navy);
   text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.h2 {
+  font-family: var(--ff-h);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
 }
 
 .h2--light {
@@ -422,12 +424,13 @@ ul {
 
 .hero__title {
   font-family: var(--ff-h);
-  font-size: clamp(3.5rem, 8vw, 7rem);
-  font-weight: 300;
+  font-size: clamp(2.8rem, 7vw, 5.2rem);
+  font-weight: 400;
   color: var(--white);
-  line-height: 1;
+  line-height: 1.05;
   margin-bottom: .5rem;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .hero__title em {
@@ -712,9 +715,10 @@ ul {
 
 .project-group__title {
   font-family: var(--ff-h);
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: var(--navy);
+  text-transform: uppercase;
 }
 
 .project-group__count {
@@ -832,11 +836,12 @@ ul {
 
 .contact-card__title {
   font-family: var(--ff-h);
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: var(--gold);
-  margin-bottom: 2.5rem;
-  line-height: 1.15;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .contact-item {
