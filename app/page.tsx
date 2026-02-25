@@ -4,14 +4,14 @@ import HomeGallery from '@/components/HomeGallery';
 
 export const metadata = {
   title: "Ana Sayfa",
-  description: "BK Mimari Tasarım — Mimarlık, İç Mimarlık ve Anahtar Teslim İnşaat Hizmetleri.",
+  description: "BK MİMARİ TASARIM — Mimarlık, İç Mimarlık ve Anahtar Teslim İnşaat Hizmetleri.",
 };
 
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "BK Mimari Tasarım",
+    "name": "BK MİMARİ TASARIM",
     "description": "Mimarlık, İç Mimarlık ve Anahtar Teslim İnşaat Hizmetleri",
     "url": "https://bkmimari.com",
     "logo": "https://bkmimari.com/assets/images/logo.webp",
@@ -47,13 +47,13 @@ export default function Home() {
           <iframe
             src="https://www.youtube.com/embed/ZadoWcbo9vs?autoplay=1&mute=1&loop=1&playlist=ZadoWcbo9vs&controls=0&showinfo=0&rel=0&iv_load_policy=3"
             allowFullScreen
-            title="BK Mimari Tasarım Tanıtım Videosu"
+            title="BK MİMARİ TASARIM Tanıtım Videosu"
           />
         </div>
         <div className="hero__overlay"></div>
         <div className="hero__content">
           <p className="hero__eyebrow">Acıbadem · Kadıköy · İstanbul</p>
-          <h1 className="hero__title">BK Mimari<br /><em>Tasarım</em></h1>
+          <h1 className="hero__title">BK MİMARİ<br /><em>TASARIM</em></h1>
           <p className="hero__sub">Mimarlık, İç Mimarlık ve Anahtar Teslim İnşaat Hizmetleri — 18 Yıllık Deneyim</p>
           <div className="hero__btns">
             <Link href="/projeler" className="btn btn--gold">Projelerimiz</Link>

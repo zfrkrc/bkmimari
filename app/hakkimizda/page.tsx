@@ -3,7 +3,7 @@ import BKImage from '@/components/BKImage';
 
 export const metadata = {
     title: "Hakkımızda",
-    description: "2007 yılında mimar Barçın Karaca tarafından kurulan BK Mimari Tasarım, 18 yıllık tecrübesi ve 500.000 m²'yi aşan proje deneyimi ile İstanbul'da hizmet vermektedir.",
+    description: "2007 yılında mimar Barçın Karaca tarafından kurulan BK MİMARİ TASARIM, 18 yıllık tecrübesi ve 500.000 m²'yi aşan proje deneyimi ile İstanbul'da hizmet vermektedir.",
     alternates: {
         canonical: "/hakkimizda",
     },
@@ -21,13 +21,13 @@ export default function About() {
                     <h1 className="h1">Geleceği<br />İnşa Ediyoruz</h1>
                     <span className="gold-line"></span>
                     <p className="body-text" style={{ marginBottom: '1.5rem' }}>
-                        2007 yılında kurulan, TMMOB ve İstanbul Ticaret Odası üyesi olan <strong style={{ color: 'var(--navy)' }}>BK Mimari Tasarım</strong>, mimari proje tasarımı, inşaat ruhsatlandırma süreçleri ve uygulama alanlarında uzmanlaşmış bir mimarlık firmasıdır.
+                        2007 yılında kurulan, TMMOB ve İstanbul Ticaret Odası üyesi olan <strong style={{ color: 'var(--navy)' }}>BK MİMARİ TASARIM</strong>, mimari proje tasarımı, inşaat ruhsatlandırma süreçleri ve uygulama alanlarında uzmanlaşmış bir mimarlık firmasıdır.
                     </p>
                     <p className="body-text" style={{ marginBottom: '1.5rem' }}>
                         Kurucumuz <strong style={{ color: 'var(--navy)' }}>Barçın KARACA</strong>, Yıldız Teknik Üniversitesi Mimarlık Fakültesi mezunu olup 18 yılı aşkın süredir sektörde aktif olarak hizmet vermektedir.
                     </p>
                     <p className="body-text" style={{ marginBottom: '2.5rem' }}>
-                        Bugüne kadar 500.000 m²'nin üzerinde ruhsat projesi hazırlayan BK Mimari Tasarım, her projede işlevselliği, estetiği ve mevzuata uygunluğu dengeli biçimde bir araya getirmeyi ilke edinmektedir. Amacımız; bulunduğu çevreye değer katan, kullanıcı odaklı ve sürdürülebilir yapılar tasarlamaktır.
+                        Bugüne kadar 500.000 m²'nin üzerinde ruhsat projesi hazırlayan BK MİMARİ TASARIM, her projede işlevselliği, estetiği ve mevzuata uygunluğu dengeli biçimde bir araya getirmeyi ilke edinmektedir. Amacımız; bulunduğu çevreye değer katan, kullanıcı odaklı ve sürdürülebilir yapılar tasarlamaktır.
                     </p>
                     <Link href="/iletisim" className="btn btn--primary">Bize Ulaşın</Link>
                 </div>

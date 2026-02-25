@@ -5,12 +5,12 @@ import Footer from "@/components/Footer";
 import Script from "next/script";
 
 const siteConfig = {
-  name: "BK Mimari Tasarım",
-  title: "BK Mimari Tasarım — Mimarlık & İç Mimarlık | İstanbul",
-  description: "Acıbadem-Kadıköy merkezli BK Mimari Tasarım; villa tasarımı, ofis dekorasyonu, 3D görselleştirme ve anahtar teslim inşaat hizmetleri. 18 yıl, 500.000 m² deneyim.",
+  name: "BK MİMARİ TASARIM",
+  title: "BK MİMARİ TASARIM — Mimarlık & İç Mimarlık | İstanbul",
+  description: "Acıbadem-Kadıköy merkezli BK MİMARİ TASARIM; villa tasarımı, ofis dekorasyonu, 3D görselleştirme ve anahtar teslim inşaat hizmetleri. 18 yıl, 500.000 m² deneyim.",
   url: "https://bkmimari.com",
   ogImage: "https://minio.bkmimari.com/bkmimari/logo.webp",
-  keywords: ["BK Mimari", "mimarlık ofisi Acıbadem", "iç mimarlık Kadıköy", "İstanbul mimari tasarım", "villa tasarımı", "anahtar teslim inşaat"],
+  keywords: ["BK MİMARİ", "mimarlık ofisi Acıbadem", "iç mimarlık Kadıköy", "İstanbul mimari tasarım", "villa tasarımı", "anahtar teslim inşaat"],
 };
 
 export const metadata: Metadata = {
@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   keywords: siteConfig.keywords,
   authors: [
     {
-      name: "BK Mimari Tasarım",
+      name: "BK MİMARİ TASARIM",
       url: siteConfig.url,
     },
   ],
-  creator: "BK Mimari Tasarım",
+  creator: "BK MİMARİ TASARIM",
   openGraph: {
     type: "website",
     locale: "tr_TR",

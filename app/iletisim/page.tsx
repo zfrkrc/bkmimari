@@ -20,7 +20,7 @@ export default function Contact() {
 
                     <div className="contact-wrap">
                         <div className="contact-card animate-in">
-                            <h2 className="contact-card__title">BK Mimari<br />Tasarım</h2>
+                            <h2 className="contact-card__title">BK MİMARİ<br />TASARIM</h2>
 
                             <div className="contact-item">
                                 <div className="contact-item__icon">📞</div>
@@ -74,7 +74,7 @@ export default function Contact() {
                                 allowFullScreen={true}
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                title="BK Mimari Tasarım Ofisi Konumu">
+                                title="BK MİMARİ TASARIM Ofisi Konumu">
                             </iframe>
                         </div>
                     </div>

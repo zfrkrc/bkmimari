@@ -9,12 +9,12 @@ const Footer = () => {
                     <div className="footer__logo">
                         <BKImage
                             src="https://minio.bkmimari.com/bkmimari/logo.webp"
-                            alt="BK Mimari"
+                            alt="BK MİMARİ"
                             style={{ height: '32px', width: 'auto' }}
                         />
                     </div>
                     <p className="footer__copy">
-                        © 2025 BK Mimari Tasarım — Acıbadem, Üsküdar / İstanbul | Tasarım:{' '}
+                        © 2025 BK MİMARİ TASARIM — Acıbadem, Üsküdar / İstanbul | Tasarım:{' '}
                         <a
                             href="https://zaferkaraca.net"
                             target="_blank"

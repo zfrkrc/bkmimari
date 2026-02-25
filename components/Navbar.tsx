@@ -35,7 +35,7 @@ const Navbar = () => {
         <Link href="/" className="nav__logo" onClick={closeMenu}>
           <BKImage
             src="https://minio.bkmimari.com/bkmimari/logo.webp"
-            alt="BK Mimari Tasarım"
+            alt="BK MİMARİ TASARIM"
             style={{ height: '44px', width: 'auto' }}
           />
         </Link>

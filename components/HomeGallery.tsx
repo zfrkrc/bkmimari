@@ -29,7 +29,7 @@ export default function HomeGallery() {
                     <div key={idx} className="gallery-item" onClick={() => openLightbox(idx)}>
                         <BKImage
                             src={src}
-                            alt="BK Mimari Proje"
+                            alt="BK MİMARİ PROJE"
                             onClick={(e) => {
                                 e.stopPropagation();
                                 openLightbox(idx);
