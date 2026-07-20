@@ -3,7 +3,7 @@ import BKImage from '@/components/BKImage';
 import HomeGallery from '@/components/HomeGallery';
 
 export const metadata = {
-  title: "Ana Sayfa",
+  title: "Mimarlık & İç Mimarlık Hizmetleri",
   description: "BK MİMARİ TASARIM — Mimarlık, İç Mimarlık ve Anahtar Teslim İnşaat Hizmetleri.",
 };
 
