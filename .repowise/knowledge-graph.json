@@ -1,0 +1,1143 @@
+{
+  "version": "1.0.0",
+  "schema_version": 1,
+  "project": {
+    "name": "bkmimari",
+    "is_monorepo": false,
+    "total_files": 34,
+    "entry_points": [],
+    "tech_stack": [
+      {
+        "name": "Next.js",
+        "version": "16.1.6",
+        "category": "framework"
+      },
+      {
+        "name": "React",
+        "version": "19.2.3",
+        "category": "framework"
+      },
+      {
+        "name": "Tailwind CSS",
+        "version": "4",
+        "category": "framework"
+      },
+      {
+        "name": "Docker",
+        "version": null,
+        "category": "infra"
+      },
+      {
+        "name": "Docker Compose",
+        "version": null,
+        "category": "infra"
+      },
+      {
+        "name": "Node.js",
+        "version": null,
+        "category": "language"
+      },
+      {
+        "name": "TypeScript",
+        "version": "5",
+        "category": "language"
+      }
+    ],
+    "entry_candidates": [],
+    "graph_mode": "flow"
+  },
+  "nodes": [
+    {
+      "id": "file:.claude/CLAUDE.md",
+      "type": "document",
+      "filePath": ".claude/CLAUDE.md",
+      "language": "markdown",
+      "symbolCount": 0,
+      "lineCount": 164,
+      "complexity": "moderate",
+      "pagerank": 0.013805,
+      "communityId": 6,
+      "tags": [],
+      "summary": "Repository instructions and context for AI coding agents."
+    },
+    {
+      "id": "file:.mcp.json",
+      "type": "config",
+      "filePath": ".mcp.json",
+      "language": "json",
+      "symbolCount": 0,
+      "lineCount": 7,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 7,
+      "tags": [
+        "config"
+      ],
+      "summary": "Configuration file: .mcp.json."
+    },
+    {
+      "id": "file:Dockerfile",
+      "type": "service",
+      "filePath": "Dockerfile",
+      "language": "dockerfile",
+      "symbolCount": 2,
+      "lineCount": 15,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 8,
+      "tags": [
+        "config",
+        "infra"
+      ],
+      "summary": "Container image build definition."
+    },
+    {
+      "id": "file:README.md",
+      "type": "document",
+      "filePath": "README.md",
+      "language": "markdown",
+      "symbolCount": 0,
+      "lineCount": 36,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 9,
+      "tags": [],
+      "summary": "Project overview and entry point for new readers."
+    },
+    {
+      "id": "file:_static_version_backup/docker-compose.yml",
+      "type": "service",
+      "filePath": "_static_version_backup/docker-compose.yml",
+      "language": "yaml",
+      "symbolCount": 0,
+      "lineCount": 13,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 10,
+      "tags": [
+        "config",
+        "infra"
+      ],
+      "summary": "Multi-container service orchestration for local development."
+    },
+    {
+      "id": "file:_static_version_backup/html/assets/images/hashes.json",
+      "type": "config",
+      "filePath": "_static_version_backup/html/assets/images/hashes.json",
+      "language": "json",
+      "symbolCount": 0,
+      "lineCount": 232,
+      "complexity": "moderate",
+      "pagerank": 0.013805,
+      "communityId": 11,
+      "tags": [
+        "config"
+      ],
+      "summary": "Configuration file: hashes.json."
+    },
+    {
+      "id": "file:app/api/health/route.ts",
+      "type": "file",
+      "filePath": "app/api/health/route.ts",
+      "language": "typescript",
+      "symbolCount": 1,
+      "lineCount": 3,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 0,
+      "tags": [],
+      "summary": "API module route defining GET.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:app/api/image/[filename]/route.ts",
+      "type": "file",
+      "filePath": "app/api/image/[filename]/route.ts",
+      "language": "typescript",
+      "symbolCount": 2,
+      "lineCount": 36,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 0,
+      "tags": [],
+      "summary": "API module route defining GET, getContentType.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:app/hakkimizda/page.tsx",
+      "type": "file",
+      "filePath": "app/hakkimizda/page.tsx",
+      "language": "typescript",
+      "symbolCount": 2,
+      "lineCount": 80,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 2,
+      "tags": [],
+      "summary": "Application module page defining About.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:app/health/route.ts",
+      "type": "file",
+      "filePath": "app/health/route.ts",
+      "language": "typescript",
+      "symbolCount": 2,
+      "lineCount": 9,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 0,
+      "tags": [],
+      "summary": "Application module route defining GET, HEAD.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:app/hizmetler/page.tsx",
+      "type": "file",
+      "filePath": "app/hizmetler/page.tsx",
+      "language": "typescript",
+      "symbolCount": 3,
+      "lineCount": 94,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 2,
+      "tags": [],
+      "summary": "Application module page defining Services.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:app/iletisim/page.tsx",
+      "type": "file",
+      "filePath": "app/iletisim/page.tsx",
+      "language": "typescript",
+      "symbolCount": 2,
+      "lineCount": 114,
+      "complexity": "moderate",
+      "pagerank": 0.013805,
+      "communityId": 12,
+      "tags": [],
+      "summary": "Application module page defining Contact.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:app/layout.tsx",
+      "type": "file",
+      "filePath": "app/layout.tsx",
+      "language": "typescript",
+      "symbolCount": 3,
+      "lineCount": 77,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 2,
+      "tags": [],
+      "summary": "Application module layout defining RootLayout.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:app/page.tsx",
+      "type": "file",
+      "filePath": "app/page.tsx",
+      "language": "typescript",
+      "symbolCount": 2,
+      "lineCount": 78,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 1,
+      "tags": [],
+      "summary": "Application module page defining Home.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:app/projeler/page.tsx",
+      "type": "file",
+      "filePath": "app/projeler/page.tsx",
+      "language": "typescript",
+      "symbolCount": 3,
+      "lineCount": 204,
+      "complexity": "moderate",
+      "pagerank": 0.013805,
+      "communityId": 1,
+      "tags": [],
+      "summary": "Application module page defining Projects.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:app/referanslar/page.tsx",
+      "type": "file",
+      "filePath": "app/referanslar/page.tsx",
+      "language": "typescript",
+      "symbolCount": 3,
+      "lineCount": 93,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 1,
+      "tags": [],
+      "summary": "Application module page defining References.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:app/robots.ts",
+      "type": "file",
+      "filePath": "app/robots.ts",
+      "language": "typescript",
+      "symbolCount": 1,
+      "lineCount": 7,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 4,
+      "tags": [],
+      "summary": "Application module robots defining robots.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:app/sitemap.ts",
+      "type": "file",
+      "filePath": "app/sitemap.ts",
+      "language": "typescript",
+      "symbolCount": 1,
+      "lineCount": 29,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 4,
+      "tags": [],
+      "summary": "Application module sitemap defining sitemap.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:components/BKImage.tsx",
+      "type": "file",
+      "filePath": "components/BKImage.tsx",
+      "language": "typescript",
+      "symbolCount": 2,
+      "lineCount": 37,
+      "complexity": "simple",
+      "pagerank": 0.06932,
+      "communityId": 1,
+      "tags": [],
+      "summary": "UI module BKImage defining BKImageProps, BKImage.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:components/Footer.tsx",
+      "type": "file",
+      "filePath": "components/Footer.tsx",
+      "language": "typescript",
+      "symbolCount": 1,
+      "lineCount": 36,
+      "complexity": "simple",
+      "pagerank": 0.016738,
+      "communityId": 2,
+      "tags": [],
+      "summary": "UI module Footer defining Footer.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:components/HomeGallery.tsx",
+      "type": "file",
+      "filePath": "components/HomeGallery.tsx",
+      "language": "typescript",
+      "symbolCount": 2,
+      "lineCount": 50,
+      "complexity": "simple",
+      "pagerank": 0.017716,
+      "communityId": 1,
+      "tags": [],
+      "summary": "UI module HomeGallery defining HomeGallery.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:components/Lightbox.tsx",
+      "type": "file",
+      "filePath": "components/Lightbox.tsx",
+      "language": "typescript",
+      "symbolCount": 2,
+      "lineCount": 40,
+      "complexity": "simple",
+      "pagerank": 0.02606,
+      "communityId": 1,
+      "tags": [],
+      "summary": "UI module Lightbox defining LightboxProps, Lightbox.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:components/Navbar.tsx",
+      "type": "file",
+      "filePath": "components/Navbar.tsx",
+      "language": "typescript",
+      "symbolCount": 1,
+      "lineCount": 68,
+      "complexity": "simple",
+      "pagerank": 0.016738,
+      "communityId": 2,
+      "tags": [],
+      "summary": "UI module Navbar defining Navbar.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:components/ProjectsClient.tsx",
+      "type": "file",
+      "filePath": "components/ProjectsClient.tsx",
+      "language": "typescript",
+      "symbolCount": 3,
+      "lineCount": 89,
+      "complexity": "simple",
+      "pagerank": 0.025539,
+      "communityId": 1,
+      "tags": [],
+      "summary": "UI module ProjectsClient defining ProjectGroup, ProjectsClientProps, ProjectsClient.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:docker-compose.yml",
+      "type": "service",
+      "filePath": "docker-compose.yml",
+      "language": "yaml",
+      "symbolCount": 0,
+      "lineCount": 22,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 13,
+      "tags": [
+        "config",
+        "infra"
+      ],
+      "summary": "Multi-container service orchestration for local development."
+    },
+    {
+      "id": "file:docker-entrypoint.sh",
+      "type": "file",
+      "filePath": "docker-entrypoint.sh",
+      "language": "shell",
+      "symbolCount": 0,
+      "lineCount": 3,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 14,
+      "tags": [],
+      "summary": "Application module docker-entrypoint.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:eslint.config.mjs",
+      "type": "file",
+      "filePath": "eslint.config.mjs",
+      "language": "javascript",
+      "symbolCount": 0,
+      "lineCount": 11,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 3,
+      "tags": [],
+      "summary": "Application module eslint.config.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:lib/minio.ts",
+      "type": "file",
+      "filePath": "lib/minio.ts",
+      "language": "typescript",
+      "symbolCount": 1,
+      "lineCount": 9,
+      "complexity": "simple",
+      "pagerank": 0.017716,
+      "communityId": 0,
+      "tags": [],
+      "summary": "Service module minio (1 symbols).",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:next.config.ts",
+      "type": "file",
+      "filePath": "next.config.ts",
+      "language": "typescript",
+      "symbolCount": 1,
+      "lineCount": 6,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 4,
+      "tags": [],
+      "summary": "Application module next.config (1 symbols).",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:package.json",
+      "type": "config",
+      "filePath": "package.json",
+      "language": "json",
+      "symbolCount": 0,
+      "lineCount": 13,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 15,
+      "tags": [
+        "config"
+      ],
+      "summary": "Node package manifest: dependencies, scripts, and metadata."
+    },
+    {
+      "id": "file:postcss.config.mjs",
+      "type": "file",
+      "filePath": "postcss.config.mjs",
+      "language": "javascript",
+      "symbolCount": 1,
+      "lineCount": 2,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 16,
+      "tags": [],
+      "summary": "Application module postcss.config (1 symbols).",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:public/assets/images/hashes.json",
+      "type": "config",
+      "filePath": "public/assets/images/hashes.json",
+      "language": "json",
+      "symbolCount": 0,
+      "lineCount": 232,
+      "complexity": "moderate",
+      "pagerank": 0.013805,
+      "communityId": 17,
+      "tags": [
+        "config"
+      ],
+      "summary": "Configuration file: hashes.json."
+    },
+    {
+      "id": "file:scripts/upload-images.mjs",
+      "type": "file",
+      "filePath": "scripts/upload-images.mjs",
+      "language": "javascript",
+      "symbolCount": 4,
+      "lineCount": 59,
+      "complexity": "moderate",
+      "pagerank": 0.013805,
+      "communityId": 0,
+      "tags": [],
+      "summary": "Docs & Tooling module upload-images defining uploadImages.",
+      "primaryOwner": "zfrkrc"
+    },
+    {
+      "id": "file:tsconfig.json",
+      "type": "config",
+      "filePath": "tsconfig.json",
+      "language": "json",
+      "symbolCount": 0,
+      "lineCount": 16,
+      "complexity": "simple",
+      "pagerank": 0.013805,
+      "communityId": 18,
+      "tags": [
+        "config"
+      ],
+      "summary": "TypeScript compiler configuration."
+    },
+    {
+      "id": "function:components/BKImage.tsx:BKImage",
+      "type": "function",
+      "filePath": "components/BKImage.tsx",
+      "name": "BKImage",
+      "language": "typescript",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:components/Lightbox.tsx:Lightbox",
+      "type": "function",
+      "filePath": "components/Lightbox.tsx",
+      "name": "Lightbox",
+      "language": "typescript",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:components/ProjectsClient.tsx:ProjectsClient",
+      "type": "function",
+      "filePath": "components/ProjectsClient.tsx",
+      "name": "ProjectsClient",
+      "language": "typescript",
+      "tags": [],
+      "summary": ""
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:app/api/health/route.ts",
+      "target": "file:external:next/server",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/api/image/[filename]/route.ts",
+      "target": "file:external:next/server",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/api/image/[filename]/route.ts",
+      "target": "file:external:stream",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/api/image/[filename]/route.ts",
+      "target": "file:lib/minio.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/hakkimizda/page.tsx",
+      "target": "file:components/BKImage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/hakkimizda/page.tsx",
+      "target": "file:external:next/link",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/health/route.ts",
+      "target": "file:external:next/server",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/hizmetler/page.tsx",
+      "target": "file:external:next/link",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/layout.tsx",
+      "target": "file:components/Footer.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/layout.tsx",
+      "target": "file:components/Navbar.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/layout.tsx",
+      "target": "file:external:next",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/layout.tsx",
+      "target": "file:external:next/script",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/page.tsx",
+      "target": "file:components/BKImage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/page.tsx",
+      "target": "file:components/HomeGallery.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/page.tsx",
+      "target": "file:external:next/link",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/projeler/page.tsx",
+      "target": "file:components/ProjectsClient.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/referanslar/page.tsx",
+      "target": "file:components/BKImage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/robots.ts",
+      "target": "file:external:next",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/sitemap.ts",
+      "target": "file:external:next",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/BKImage.tsx",
+      "target": "file:external:react",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/BKImage.tsx",
+      "target": "function:components/BKImage.tsx:BKImage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/Footer.tsx",
+      "target": "file:components/BKImage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/Footer.tsx",
+      "target": "file:external:next/link",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/HomeGallery.tsx",
+      "target": "file:components/BKImage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/HomeGallery.tsx",
+      "target": "file:components/Lightbox.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/HomeGallery.tsx",
+      "target": "file:external:react",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/Lightbox.tsx",
+      "target": "file:components/BKImage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/Lightbox.tsx",
+      "target": "file:external:react",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/Lightbox.tsx",
+      "target": "function:components/Lightbox.tsx:Lightbox",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/Navbar.tsx",
+      "target": "file:components/BKImage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/Navbar.tsx",
+      "target": "file:external:next/image",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/Navbar.tsx",
+      "target": "file:external:next/link",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/Navbar.tsx",
+      "target": "file:external:react",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/ProjectsClient.tsx",
+      "target": "file:components/BKImage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/ProjectsClient.tsx",
+      "target": "file:components/Lightbox.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/ProjectsClient.tsx",
+      "target": "file:external:react",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:components/ProjectsClient.tsx",
+      "target": "function:components/ProjectsClient.tsx:ProjectsClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:eslint.config.mjs",
+      "target": "file:external:eslint-config-next/core-web-vitals",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:eslint.config.mjs",
+      "target": "file:external:eslint-config-next/typescript",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:eslint.config.mjs",
+      "target": "file:external:eslint/config",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:lib/minio.ts",
+      "target": "file:external:minio",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:next.config.ts",
+      "target": "file:external:next",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/upload-images.mjs",
+      "target": "file:external:fs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/upload-images.mjs",
+      "target": "file:external:minio",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/upload-images.mjs",
+      "target": "file:external:path",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:application",
+      "name": "Application",
+      "description": "",
+      "nodeIds": [
+        "file:.mcp.json",
+        "file:Dockerfile",
+        "file:README.md",
+        "file:_static_version_backup/docker-compose.yml",
+        "file:_static_version_backup/html/assets/images/hashes.json",
+        "file:app/hakkimizda/page.tsx",
+        "file:app/health/route.ts",
+        "file:app/hizmetler/page.tsx",
+        "file:app/iletisim/page.tsx",
+        "file:app/layout.tsx",
+        "file:app/page.tsx",
+        "file:app/projeler/page.tsx",
+        "file:app/referanslar/page.tsx",
+        "file:app/robots.ts",
+        "file:app/sitemap.ts",
+        "file:docker-compose.yml",
+        "file:docker-entrypoint.sh",
+        "file:eslint.config.mjs",
+        "file:next.config.ts",
+        "file:package.json",
+        "file:postcss.config.mjs",
+        "file:public/assets/images/hashes.json",
+        "file:tsconfig.json"
+      ],
+      "display_order": 0,
+      "order_basis": "imports"
+    },
+    {
+      "id": "layer:api",
+      "name": "API",
+      "description": "",
+      "nodeIds": [
+        "file:app/api/health/route.ts",
+        "file:app/api/image/[filename]/route.ts"
+      ],
+      "display_order": 1,
+      "order_basis": "imports"
+    },
+    {
+      "id": "layer:config",
+      "name": "Config",
+      "description": "",
+      "nodeIds": [
+        "file:.claude/CLAUDE.md"
+      ],
+      "display_order": 2,
+      "order_basis": "imports"
+    },
+    {
+      "id": "layer:service",
+      "name": "Service",
+      "description": "",
+      "nodeIds": [
+        "file:lib/minio.ts"
+      ],
+      "display_order": 3,
+      "order_basis": "imports"
+    },
+    {
+      "id": "layer:ui",
+      "name": "UI",
+      "description": "",
+      "nodeIds": [
+        "file:components/BKImage.tsx",
+        "file:components/Footer.tsx",
+        "file:components/HomeGallery.tsx",
+        "file:components/Lightbox.tsx",
+        "file:components/Navbar.tsx",
+        "file:components/ProjectsClient.tsx"
+      ],
+      "display_order": 4,
+      "order_basis": "imports"
+    },
+    {
+      "id": "layer:docs-tooling",
+      "name": "Docs & Tooling",
+      "description": "",
+      "nodeIds": [
+        "file:scripts/upload-images.mjs"
+      ],
+      "display_order": 5,
+      "order_basis": "imports"
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "target_path": "README.md",
+      "page_type": "repo_overview",
+      "title": "README.md",
+      "depth": 0,
+      "kind": "overview",
+      "reason": "Start here for the end-to-end picture before diving into the code.",
+      "layer_id": "layer:application"
+    },
+    {
+      "order": 2,
+      "target_path": "components/ProjectsClient.tsx",
+      "page_type": "file_page",
+      "title": "ProjectsClient.tsx",
+      "depth": 0,
+      "kind": "code",
+      "reason": "The walk's anchor \u2014 its imports fan out the widest in a repo with no single entry point.",
+      "layer_id": "layer:ui"
+    },
+    {
+      "order": 3,
+      "target_path": "components/BKImage.tsx",
+      "page_type": "file_page",
+      "title": "BKImage.tsx",
+      "depth": 1,
+      "kind": "code",
+      "reason": "Directly imported by the anchor above; a core collaborator.",
+      "layer_id": "layer:ui"
+    },
+    {
+      "order": 4,
+      "target_path": "components/Lightbox.tsx",
+      "page_type": "file_page",
+      "title": "Lightbox.tsx",
+      "depth": 1,
+      "kind": "code",
+      "reason": "Directly imported by the anchor above; a core collaborator.",
+      "layer_id": "layer:ui"
+    },
+    {
+      "order": 5,
+      "target_path": "components/HomeGallery.tsx",
+      "page_type": "file_page",
+      "title": "HomeGallery.tsx",
+      "depth": 2,
+      "kind": "code",
+      "reason": "Off the import paths walked above \u2014 a standalone or supporting file.",
+      "layer_id": "layer:ui"
+    },
+    {
+      "order": 6,
+      "target_path": "lib/minio.ts",
+      "page_type": "file_page",
+      "title": "minio.ts",
+      "depth": 2,
+      "kind": "code",
+      "reason": "Off the import paths walked above \u2014 a standalone or supporting file.",
+      "layer_id": "layer:service"
+    },
+    {
+      "order": 7,
+      "target_path": "components/Footer.tsx",
+      "page_type": "file_page",
+      "title": "Footer.tsx",
+      "depth": 2,
+      "kind": "code",
+      "reason": "Off the import paths walked above \u2014 a standalone or supporting file.",
+      "layer_id": "layer:ui"
+    },
+    {
+      "order": 8,
+      "target_path": "scripts/upload-images.mjs",
+      "page_type": "file_page",
+      "title": "upload-images.mjs",
+      "depth": 2,
+      "kind": "code",
+      "reason": "The Docs & Tooling layer's anchor \u2014 its most depended-on file.",
+      "layer_id": "layer:docs-tooling"
+    },
+    {
+      "order": 9,
+      "target_path": "app/layout.tsx",
+      "page_type": "file_page",
+      "title": "layout.tsx",
+      "depth": 2,
+      "kind": "code",
+      "reason": "Off the import paths walked above \u2014 a standalone or supporting file.",
+      "layer_id": "layer:application"
+    },
+    {
+      "order": 10,
+      "target_path": "app/api/health/route.ts",
+      "page_type": "file_page",
+      "title": "route.ts",
+      "depth": 2,
+      "kind": "code",
+      "reason": "The API layer's anchor \u2014 its most depended-on file.",
+      "layer_id": "layer:api"
+    },
+    {
+      "order": 11,
+      "target_path": "Dockerfile",
+      "page_type": "infra_page",
+      "title": "Dockerfile",
+      "depth": 3,
+      "kind": "infra",
+      "reason": "How the system above is configured, built, or deployed.",
+      "layer_id": "layer:application"
+    },
+    {
+      "order": 12,
+      "target_path": "_static_version_backup/docker-compose.yml",
+      "page_type": "infra_page",
+      "title": "docker-compose.yml",
+      "depth": 3,
+      "kind": "infra",
+      "reason": "How the system above is configured, built, or deployed.",
+      "layer_id": "layer:application"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module:application",
+      "name": "Application",
+      "path": "",
+      "layerId": "layer:application",
+      "nodeIds": [
+        "file:.mcp.json",
+        "file:Dockerfile",
+        "file:README.md",
+        "file:_static_version_backup/docker-compose.yml",
+        "file:_static_version_backup/html/assets/images/hashes.json",
+        "file:app/hakkimizda/page.tsx",
+        "file:app/health/route.ts",
+        "file:app/hizmetler/page.tsx",
+        "file:app/iletisim/page.tsx",
+        "file:app/layout.tsx",
+        "file:app/page.tsx",
+        "file:app/projeler/page.tsx",
+        "file:app/referanslar/page.tsx",
+        "file:app/robots.ts",
+        "file:app/sitemap.ts",
+        "file:docker-compose.yml",
+        "file:docker-entrypoint.sh",
+        "file:eslint.config.mjs",
+        "file:next.config.ts",
+        "file:package.json",
+        "file:postcss.config.mjs",
+        "file:public/assets/images/hashes.json",
+        "file:tsconfig.json"
+      ],
+      "wholeLayer": true,
+      "language": "typescript"
+    },
+    {
+      "id": "module:components",
+      "name": "UI",
+      "path": "components",
+      "layerId": "layer:ui",
+      "nodeIds": [
+        "file:components/BKImage.tsx",
+        "file:components/Footer.tsx",
+        "file:components/HomeGallery.tsx",
+        "file:components/Lightbox.tsx",
+        "file:components/Navbar.tsx",
+        "file:components/ProjectsClient.tsx"
+      ],
+      "wholeLayer": true,
+      "language": "typescript"
+    }
+  ]
+}
