@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Script from "next/script";
 
 const siteConfig = {
   name: "BK MİMARİ TASARIM",
@@ -78,13 +77,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-M2S927G');`,
           }}
-        />
-        {/* Cookiebot */}
-        <Script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="479f7920-750f-4420-a46a-d1915ac07132"
-          strategy="beforeInteractive"
         />
       </head>
       <body className="antialiased">
