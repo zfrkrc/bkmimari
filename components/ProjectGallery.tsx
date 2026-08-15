@@ -26,7 +26,7 @@ export default function ProjectGallery({ images }: { images: ProjectImage[] }) {
                         <BKImage
                             src={img.src}
                             alt={img.alt}
-                            loading={idx < 3 ? 'eager' : 'lazy'}
+                            loading={idx < 4 ? 'eager' : 'lazy'}
                             fetchPriority={idx === 0 ? 'high' : undefined}
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                             onClick={(e) => {
