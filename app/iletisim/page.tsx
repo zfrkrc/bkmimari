@@ -1,6 +1,6 @@
 export const metadata = {
-    title: "İletişim",
-    description: "Mimari projeleriniz için profesyonel destek almak üzere bizimle iletişime geçin. Acıbadem, Üsküdar ofisimizde sizi bekliyoruz.",
+    title: "İletişim — Teklif Alın",
+    description: "Mimari projeleriniz için profesyonel destek alın. Acıbadem, Üsküdar ofisimizde sizi bekliyoruz. Telefon: 0 (532) 695 98 56 — info@bkmimari.com.",
     alternates: {
         canonical: "/iletisim",
     },

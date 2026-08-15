@@ -5,10 +5,10 @@ import Footer from "@/components/Footer";
 
 const siteConfig = {
   name: "BK MİMARİ TASARIM",
-  title: "BK MİMARİ TASARIM — Mimarlık & İç Mimarlık | İstanbul",
-  description: "Acıbadem-Kadıköy merkezli BK MİMARİ TASARIM; villa tasarımı, ofis dekorasyonu, 3D görselleştirme ve anahtar teslim inşaat hizmetleri. 18 yıl, 500.000 m² deneyim.",
+  title: "BK Mimarı Tasarım — Mimarlık & İç Mimarlık | Acıbadem, İstanbul",
+  description: "Acıbadem-Kadıköy merkezli BK MİMARİ TASARIM; villa tasarımı, ofis dekorasyonu, 3D görselleştirme ve anahtar teslim inşaat hizmetleri. 19 yıl, 500.000 m² deneyim.",
   url: "https://bkmimari.com",
-  ogImage: "https://minio.bkmimari.com/bkmimari/logo.webp",
+  ogImage: "https://bkmimari.com/og.webp",
   keywords: ["BK MİMARİ", "mimarlık ofisi Acıbadem", "iç mimarlık Kadıköy", "İstanbul mimari tasarım", "villa tasarımı", "anahtar teslim inşaat"],
 };
 
@@ -68,6 +68,13 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
+        {/* Fontlar: preconnect + preload + swap */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Inter:wght@300;400;500;600&display=swap&subset=latin-ext"
+          rel="stylesheet"
+        />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{

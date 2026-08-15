@@ -1,8 +1,8 @@
 import ProjectsClient from "@/components/ProjectsClient";
 
 export const metadata = {
-    title: "Projelerimiz",
-    description: "Konut, ticari ve kurumsal alanlarda tamamladığımız 500.000 m²'yi aşkın mimari proje portföyümüzü inceleyin.",
+    title: "Projelerimiz — Tamamlanan Mimari Projeler",
+    description: "Konut, eğitim ve kamu yapılarında tamamladığımız 500.000 m²'yi aşkın mimari proje portföyümüzü inceleyin: İzmit Belediyesi, Kıraç Okulları ve daha fazlası.",
     alternates: {
         canonical: "/projeler",
     },

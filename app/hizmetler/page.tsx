@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-    title: "Hizmetlerimiz",
-    description: "Mimari proje tasarımı, 3D görselleştirme, ruhsatlandırma, kentsel dönüşüm ve iç mimarlık gibi geniş bir yelpazede profesyonel mimarlık hizmetleri sunuyoruz.",
+    title: "Hizmetlerimiz — Mimari Proje, İç Mimarlık, Anahtar Teslim",
+    description: "Mimari proje tasarımı, iç mimarlık, 3D görselleştirme, inşaat ruhsatlandırma ve anahtar teslim inşaat hizmetleri. Acıbadem, İstanbul'da 19 yıllık deneyim.",
     alternates: {
         canonical: "/hizmetler",
     },
@@ -45,7 +45,7 @@ export default function Services() {
                     <div className="services-cta animate-in">
                         <div className="services-cta__text">
                             <h3 className="services-cta__title">Projenizi Birlikte Hayata Geçirelim</h3>
-                            <p className="services-cta__sub">18 yıllık deneyimimiz ve 500.000 m²'yi aşan ruhsat projesi birikimimizle hizmetinizdeyiz.</p>
+                            <p className="services-cta__sub">19 yıllık deneyimimiz ve 500.000 m²'yi aşan ruhsat projesi birikimimizle hizmetinizdeyiz.</p>
                         </div>
                         <Link href="/iletisim" className="btn btn--gold">İletişime Geç</Link>
                     </div>

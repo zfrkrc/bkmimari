@@ -1,8 +1,8 @@
 import BKImage from '@/components/BKImage';
 
 export const metadata = {
-    title: "Referanslarımız",
-    description: "Çevre ve Şehircilik Bakanlığı, İzmit Belediyesi ve Luxera GYO gibi lider kurumsal ortaklarımızla gerçekleştirdiğimiz başarılı projeler.",
+    title: "Referanslarımız — Kurumsal Müşteriler",
+    description: "Çevre ve Şehircilik Bakanlığı, İzmit Belediyesi, Luxera GYO ve Kıraç Okulları gibi kurumsal ortaklarımızla gerçekleştirdiğimiz projeler.",
     alternates: {
         canonical: "/referanslar",
     },

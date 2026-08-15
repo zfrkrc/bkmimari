@@ -37,6 +37,8 @@ const Navbar = () => {
             src="https://minio.bkmimari.com/bkmimari/logo.webp"
             alt="BK MİMARİ TASARIM"
             style={{ height: '44px', width: 'auto' }}
+            loading="eager"
+            fetchPriority="high"
           />
         </Link>
         <ul className={`nav__links ${isOpen ? 'open' : ''}`} id="navLinks">
