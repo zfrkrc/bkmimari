@@ -529,6 +529,11 @@ ul {
   gap: 1.5rem;
 }
 
+/* koyu zemin bölümlerde etiket açık sarı */
+.gallery-section .label {
+  color: var(--gold-l);
+}
+
 .showcase-card {
   background: #202020;
   border: 1px solid rgba(255, 255, 255, .06);
