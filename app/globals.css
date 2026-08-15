@@ -1072,6 +1072,180 @@ ul {
   border-radius: 0 !important;
 }
 
+/* ── PROJECT CARDS (listeleme) ─────────────────── */
+.projects-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--border);
+  transition: transform var(--t) var(--ease), box-shadow var(--t) var(--ease), border-color var(--t);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(12, 44, 104, .1);
+  border-color: var(--gold);
+}
+
+.project-card__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s var(--ease);
+}
+
+.project-card:hover .project-card__media img {
+  transform: scale(1.05);
+}
+
+.project-card__info {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.project-card__title {
+  font-family: var(--ff-h);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  margin-bottom: .35rem;
+}
+
+.project-card__meta {
+  font-family: var(--ff-b);
+  font-size: .85rem;
+  color: var(--mid);
+}
+
+/* ── PROJECT DETAIL ────────────────────────────── */
+.projects-hero--detail {
+  text-align: left;
+  padding: 6rem 0 4rem;
+}
+
+.detail-back {
+  display: inline-block;
+  font-family: var(--ff-b);
+  font-size: .8rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .7);
+  margin-bottom: 1.5rem;
+  transition: color var(--t);
+}
+
+.detail-back:hover {
+  color: var(--gold);
+}
+
+.project-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+
+.project-fact {
+  background: var(--white);
+  padding: 1.5rem 1.25rem;
+}
+
+.project-fact__label {
+  display: block;
+  font-family: var(--ff-b);
+  font-size: .7rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--soft);
+  margin-bottom: .35rem;
+}
+
+.project-fact__value {
+  font-family: var(--ff-b);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.project-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+/* ── VIDEO FACADE (lite embed) ─────────────────── */
+.projects-video {
+  padding: 4rem 0 0;
+}
+
+.video-facade {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  background: #000;
+  border-radius: 0 !important;
+}
+
+.video-facade__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 29, 69, .35);
+  color: var(--white);
+  transition: background var(--t);
+}
+
+.video-facade__play svg {
+  width: 72px;
+  height: 72px;
+  padding: 1rem;
+  border: 2px solid var(--gold);
+  border-radius: 0 !important;
+  color: var(--gold);
+  background: rgba(8, 29, 69, .6);
+  transition: transform var(--t), background var(--t);
+}
+
+.video-facade:hover .video-facade__play {
+  background: rgba(8, 29, 69, .15);
+}
+
+.video-facade:hover .video-facade__play svg {
+  transform: scale(1.08);
+  background: var(--navy);
+}
+
+.video-facade--active iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  aspect-ratio: 16 / 9;
+}
+
 .project-thumb img {
   width: 100%;
   height: 100%;
@@ -1514,6 +1688,14 @@ ul {
     grid-template-columns: 1fr;
   }
 
+  .projects-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .home-services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1549,6 +1731,14 @@ ul {
   }
 
   .home-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-grid {
     grid-template-columns: 1fr;
   }
 

@@ -11,10 +11,11 @@ interface BKImageProps {
     fetchPriority?: 'high' | 'low' | 'auto';
     width?: number;
     height?: number;
+    sizes?: string;
     onClick?: (e: React.MouseEvent<HTMLImageElement>) => void;
 }
 
-export default function BKImage({ src, alt, className, style, loading = 'lazy', fetchPriority, width, height, onClick }: BKImageProps) {
+export default function BKImage({ src, alt, className, style, loading = 'lazy', fetchPriority, width, height, sizes, onClick }: BKImageProps) {
     // Determine the source - be very aggressive about proxying anything related to minio
     const isMinio = typeof src === 'string' && (
         src.includes('minio') ||
@@ -50,6 +51,7 @@ export default function BKImage({ src, alt, className, style, loading = 'lazy', 
             fetchPriority={fetchPriority}
             width={width}
             height={height}
+            sizes={sizes}
             onError={handleError}
             onClick={onClick}
         />

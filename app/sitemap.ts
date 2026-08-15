@@ -1,12 +1,20 @@
 import { MetadataRoute } from 'next';
+import { projects } from '@/lib/projects';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://bkmimari.com';
 
+    const projectUrls = projects.map((p) => ({
+        url: `${baseUrl}/projeler/${p.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+    }));
+
     return [
         {
             url: baseUrl,
-            lastModified: new URLSearchParams().get('lastModified') || new Date(),
+            lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 1,
         },
@@ -28,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'weekly',
             priority: 0.9,
         },
+        ...projectUrls,
         {
             url: `${baseUrl}/referanslar`,
             lastModified: new Date(),
