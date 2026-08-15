@@ -5,6 +5,7 @@
   --navy-d: #081d45;
   --gold: #eab308;
   --gold-l: #facc15;
+  --gold-ink: #7a5c17;
   --cream: #f5f2ec;
   --cream-d: #ede9e0;
   --white: #fffffe;
@@ -119,7 +120,7 @@ ul {
   font-weight: 500;
   letter-spacing: .22em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
   display: block;
   margin-bottom: 1.25rem;
 }
@@ -657,7 +658,7 @@ ul {
   font-weight: 600;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
 
 /* ── HOME PROCESS ─────────────────────────────── */
@@ -681,7 +682,7 @@ ul {
   font-family: var(--ff-h);
   font-size: 2.5rem;
   font-weight: 300;
-  color: var(--gold);
+  color: var(--gold-ink);
   line-height: 1;
   margin-bottom: .75rem;
 }
