@@ -1,6 +1,6 @@
 import ProjectsClient from "@/components/ProjectsClient";
 import VideoFacade from "@/components/VideoFacade";
-import { projects } from "@/lib/projects";
+import { getProjects } from "@/lib/projects-store";
 
 export const metadata = {
     title: "Projelerimiz — Tamamlanan Mimari Projeler",
@@ -10,7 +10,8 @@ export const metadata = {
     },
 };
 
-export default function Projects() {
+export default async function Projects() {
+    const projects = await getProjects();
     return (
         <main>
             <div className="projects-hero">

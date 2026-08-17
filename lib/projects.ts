@@ -16,7 +16,7 @@ export interface Project {
     images: ProjectImage[];
 }
 
-export const projects: Project[] = [
+export const defaultProjects: Project[] = [
     {
         slug: "izmit-belediyesi",
         title: "İzmit Belediyesi",
@@ -176,5 +176,5 @@ export const projects: Project[] = [
 ];
 
 export function getProject(slug: string): Project | undefined {
-    return projects.find((p) => p.slug === slug);
+    return defaultProjects.find((p) => p.slug === slug);
 }

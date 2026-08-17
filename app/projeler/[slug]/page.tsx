@@ -1,15 +1,16 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import ProjectGallery from '@/components/ProjectGallery';
-import { projects, getProject } from '@/lib/projects';
+import { getProjects, getProject } from '@/lib/projects-store';
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+    const projects = await getProjects();
     return projects.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
-    const project = getProject(slug);
+    const project = await getProject(slug);
     if (!project) return {};
     const loc = project.location ? `${project.location} ` : '';
     return {
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
-    const project = getProject(slug);
+    const project = await getProject(slug);
     if (!project) notFound();
 
     const facts: { label: string; value: string | null }[] = [

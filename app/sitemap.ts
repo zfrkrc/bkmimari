@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next';
-import { projects } from '@/lib/projects';
+import { getProjects } from '@/lib/projects-store';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = 'https://bkmimari.com';
+    const projects = await getProjects();
 
     const projectUrls = projects.map((p) => ({
         url: `${baseUrl}/projeler/${p.slug}`,

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Shell from "@/components/Shell";
 
 const siteConfig = {
   name: "BK MİMARİ TASARIM",
@@ -97,9 +98,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
 
-        <Navbar />
-        {children}
-        <Footer />
+        <Shell nav={<Navbar />} footer={<Footer />}>
+          {children}
+        </Shell>
       </body>
     </html>
   );
