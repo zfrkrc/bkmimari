@@ -13,8 +13,8 @@
   --mid: #5a5a5a;
   --soft: #9a9a9a;
   --border: #ddd8cf;
-  --ff-h: 'Oswald', sans-serif;
-  --ff-b: 'Oswald', sans-serif;
+  --ff-h: 'Cormorant Garamond', Georgia, serif;
+  --ff-b: 'Inter', system-ui, sans-serif;
   --ease: cubic-bezier(.4, 0, .2, 1);
   --t: 0.3s;
 
@@ -305,7 +305,7 @@ ul {
 
 .nav__link {
   display: block;
-  font-family: var(--ff-h);
+  font-family: var(--ff-b);
   font-size: .78rem;
   font-weight: 500;
   letter-spacing: .14em;
