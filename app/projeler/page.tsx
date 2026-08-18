@@ -3,8 +3,8 @@ import VideoFacade from "@/components/VideoFacade";
 import { getProjects } from "@/lib/projects-store";
 
 export const metadata = {
-    title: "Projelerimiz — Tamamlanan Mimari Projeler",
-    description: "Konut, eğitim ve kamu yapılarında tamamladığımız 500.000 m²'yi aşkın mimari proje portföyümüzü inceleyin: İzmit Belediyesi, Kıraç Okulları ve daha fazlası.",
+    title: "Projelerimiz",
+    description: "Konut, ticari ve kurumsal alanlarda tamamladığımız 500.000 m²'yi aşkın mimari proje portföyümüzü inceleyin.",
     alternates: {
         canonical: "/projeler",
     },
