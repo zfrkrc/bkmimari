@@ -8,7 +8,7 @@ import { getSiteContent } from "@/lib/site-store";
 const siteConfig = {
   name: "BK MİMARİ TASARIM",
   title: "BK MİMARİ TASARIM — Mimarlık & İç Mimarlık | İstanbul",
-  description: "Acıbadem-Kadıköy merkezli BK MİMARİ TASARIM; villa tasarımı, ofis dekorasyonu, 3D görselleştirme ve anahtar teslim inşaat hizmetleri. 18 yıl, 500.000 m² deneyim.",
+  description: "Acıbadem-Kadıköy merkezli BK MİMARİ TASARIM; villa tasarımı, ofis dekorasyonu, 3D görselleştirme ve anahtar teslim inşaat hizmetleri. 19 yıl, 500.000 m² deneyim.",
   url: "https://bkmimari.com",
   ogImage: "https://bkmimari.com/og.webp",
   keywords: ["BK MİMARİ", "mimarlık ofisi Acıbadem", "iç mimarlık Kadıköy", "İstanbul mimari tasarım", "villa tasarımı", "anahtar teslim inşaat"],

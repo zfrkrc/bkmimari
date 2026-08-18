@@ -45,7 +45,7 @@ export default function Services() {
                     <div className="services-cta animate-in">
                         <div className="services-cta__text">
                             <h3 className="services-cta__title">Projenizi Birlikte Hayata Geçirelim</h3>
-                            <p className="services-cta__sub">18 yıllık deneyimimiz ve 500.000 m²'yi aşan ruhsat projesi birikimimizle hizmetinizdeyiz.</p>
+                            <p className="services-cta__sub">19 yıllık deneyimimiz ve 500.000 m²'yi aşan ruhsat projesi birikimimizle hizmetinizdeyiz.</p>
                         </div>
                         <Link href="/iletisim" className="btn btn--gold">İletişime Geç</Link>
                     </div>
