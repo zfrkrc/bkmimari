@@ -1,14 +1,17 @@
 import Link from 'next/link';
 import BKImage from './BKImage';
+import { getSiteContent } from '@/lib/site-store';
 
-const Footer = () => {
+const Footer = async () => {
+    const site = await getSiteContent();
+
     return (
         <footer className="footer">
             <div className="container">
                 <div className="footer__inner">
                     <div className="footer__logo">
                         <BKImage
-                            src="https://minio.bkmimari.com/bkmimari/logo.webp"
+                            src={site.logo}
                             alt="BK MİMARİ"
                             style={{ height: '32px', width: 'auto' }}
                         />

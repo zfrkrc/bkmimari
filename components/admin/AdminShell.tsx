@@ -7,7 +7,8 @@ import { adminStyles, colors } from "@/lib/admin-styles";
 const NAV = [
   { href: "/admin", label: "Panel", icon: "▤" },
   { href: "/admin/projeler", label: "Projeler", icon: "▦" },
-  { href: "/admin/projeler/yeni", label: "Yeni Proje", icon: "+" },
+  { href: "/admin/referanslar", label: "Referanslar", icon: "◈" },
+  { href: "/admin/ayarlar", label: "Site Ayarları", icon: "⚙" },
 ];
 
 export default function AdminShell({ children }: { children: React.ReactNode }) {

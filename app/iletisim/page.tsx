@@ -1,3 +1,5 @@
+import { getSiteContent } from '@/lib/site-store';
+
 export const metadata = {
     title: "İletişim — Teklif Alın",
     description: "Mimari projeleriniz için profesyonel destek alın. Acıbadem, Üsküdar ofisimizde sizi bekliyoruz. Telefon: 0 (532) 695 98 56 — info@bkmimari.com.",
@@ -6,7 +8,9 @@ export const metadata = {
     },
 };
 
-export default function Contact() {
+export default async function Contact() {
+    const site = await getSiteContent();
+
     return (
         <main className="fade-in">
             <div style={{ paddingTop: '72px' }}>
@@ -26,7 +30,7 @@ export default function Contact() {
                                 <div className="contact-item__icon">📞</div>
                                 <div>
                                     <div className="contact-item__meta">Telefon</div>
-                                    <div className="contact-item__val"><a href="tel:05326959856">0 (532) 695 98 56</a></div>
+                                    <div className="contact-item__val"><a href={`tel:${site.phone}`}>{site.phoneDisplay}</a></div>
                                 </div>
                             </div>
 
@@ -34,7 +38,7 @@ export default function Contact() {
                                 <div className="contact-item__icon">✉</div>
                                 <div>
                                     <div className="contact-item__meta">E-posta</div>
-                                    <div className="contact-item__val"><a href="mailto:info@bkmimari.com">info@bkmimari.com</a></div>
+                                    <div className="contact-item__val"><a href={`mailto:${site.email}`}>{site.email}</a></div>
                                 </div>
                             </div>
 
@@ -42,11 +46,7 @@ export default function Contact() {
                                 <div className="contact-item__icon">📍</div>
                                 <div>
                                     <div className="contact-item__meta">Adres</div>
-                                    <div className="contact-item__val">
-                                        Acıbadem Mahallesi, Derin Sokak<br />
-                                        Almondhill Sitesi D No:5 Z İç Kapı No:2<br />
-                                        Üsküdar / İstanbul
-                                    </div>
+                                    <div className="contact-item__val" style={{ whiteSpace: 'pre-line' }}>{site.address}</div>
                                 </div>
                             </div>
 
@@ -54,16 +54,16 @@ export default function Contact() {
                                 <div className="contact-item__icon">🕐</div>
                                 <div>
                                     <div className="contact-item__meta">Çalışma Saatleri</div>
-                                    <div className="contact-item__val">Hafta İçi: 09:00 – 18:00</div>
+                                    <div className="contact-item__val">{site.workingHours}</div>
                                 </div>
                             </div>
 
                             <div className="contact-badge">
-                                TMMOB Üyesi · İstanbul Ticaret Odası Üyesi
+                                {site.badge}
                             </div>
 
                             <div style={{ marginTop: '2rem' }}>
-                                <a href="tel:05326959856" className="btn btn--gold" style={{ width: '100%', textAlign: 'center' }}>Hemen Ara</a>
+                                <a href={`tel:${site.phone}`} className="btn btn--gold" style={{ width: '100%', textAlign: 'center' }}>Hemen Ara</a>
                             </div>
                         </div>
 

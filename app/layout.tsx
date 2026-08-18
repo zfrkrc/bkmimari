@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Shell from "@/components/Shell";
+import { getSiteContent } from "@/lib/site-store";
 
 const siteConfig = {
   name: "BK MİMARİ TASARIM",
@@ -61,11 +62,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const site = await getSiteContent();
+
   return (
     <html lang="tr">
       <head>
@@ -98,7 +101,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
 
-        <Shell nav={<Navbar />} footer={<Footer />}>
+        <Shell nav={<Navbar site={site} />} footer={<Footer />}>
           {children}
         </Shell>
       </body>

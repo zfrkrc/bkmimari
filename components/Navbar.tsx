@@ -4,8 +4,9 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import BKImage from './BKImage';
+import type { SiteContent } from '@/lib/site-store';
 
-const Navbar = () => {
+const Navbar = ({ site }: { site: SiteContent }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -34,7 +35,7 @@ const Navbar = () => {
       <div className="nav__inner">
         <Link href="/" className="nav__logo" onClick={closeMenu}>
           <BKImage
-            src="https://minio.bkmimari.com/bkmimari/logo.webp"
+            src={site.logo}
             alt="BK MİMARİ TASARIM"
             style={{ height: '44px', width: 'auto' }}
             loading="eager"
@@ -49,8 +50,8 @@ const Navbar = () => {
           <li><Link href="/iletisim" className="nav__link" onClick={closeMenu}>İletişim</Link></li>
         </ul>
         <div className="nav__actions">
-          <a href="tel:05326959856" className="nav__icon" aria-label="Telefon">📞</a>
-          <a href="mailto:info@bkmimari.com" className="nav__icon" aria-label="E-posta">✉</a>
+          <a href={`tel:${site.phone}`} className="nav__icon" aria-label="Telefon">📞</a>
+          <a href={`mailto:${site.email}`} className="nav__icon" aria-label="E-posta">✉</a>
           <button
             className="nav__toggle"
             id="navToggle"

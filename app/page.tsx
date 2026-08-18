@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import BKImage from '@/components/BKImage';
 import HomeGallery from '@/components/HomeGallery';
+import { getSiteContent } from '@/lib/site-store';
 
 export const metadata = {
   title: "BK Mimarı Tasarım — Mimarlık & İç Mimarlık | Acıbadem, İstanbul",
@@ -27,14 +28,8 @@ const stats = [
   { num: "14+", label: "Kurumsal Referans" },
 ];
 
-const refs = [
-  { name: "Çevre ve Şehircilik Bakanlığı", img: "https://minio.bkmimari.com/bkmimari/cevre-318x100.webp" },
-  { name: "İzmit Belediyesi", img: "https://minio.bkmimari.com/bkmimari/izmit-600x213.webp" },
-  { name: "Luxera GYO", img: "https://minio.bkmimari.com/bkmimari/luxera-gyo-logo-lacivertt.pdf-315x146.webp" },
-  { name: "Kıraç Okulları", img: "https://minio.bkmimari.com/bkmimari/images-225x225.webp" },
-];
-
-export default function Home() {
+export default async function Home() {
+  const site = await getSiteContent();
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -73,7 +68,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero__bg">
           <BKImage
-            src="https://minio.bkmimari.com/bkmimari/izmit1-1600x999.webp"
+            src={site.heroBg}
             alt="BK MİMARİ TASARIM mimari proje görselleştirmesi"
             loading="eager"
             fetchPriority="high"
@@ -170,7 +165,7 @@ export default function Home() {
             <span className="gold-line gold-line--center"></span>
           </div>
           <div className="home-refs-grid">
-            {refs.map((r) => (
+            {site.references.slice(0, 4).map((r) => (
               <div key={r.name} className="home-ref">
                 <BKImage src={r.img} alt={r.name} loading="lazy" />
               </div>
