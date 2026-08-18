@@ -15,6 +15,11 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
   const pathname = usePathname();
   const router = useRouter();
 
+  function isActive(href: string) {
+    if (href === "/admin") return pathname === "/admin";
+    return pathname === href || pathname.startsWith(href + "/");
+  }
+
   async function logout() {
     await fetch("/api/admin/logout", { method: "POST" });
     router.push("/admin/login");
@@ -42,7 +47,7 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
                 href={item.href}
                 style={{
                   ...adminStyles.navLink,
-                  ...(pathname === item.href ? adminStyles.navLinkActive : {}),
+                  ...(isActive(item.href) ? adminStyles.navLinkActive : {}),
                 }}
               >
                 <span style={{ width: 16, textAlign: "center" }}>{item.icon}</span>
