@@ -18,22 +18,22 @@ export interface Project {
 
 export const defaultProjects: Project[] = [
     {
-        slug: "izmit-belediyesi",
-        title: "İzmit Belediyesi",
-        category: "Kamu Yapısı",
+        slug: "cedit-mahallesi",
+        title: "Cedit Mahallesi",
+        category: null,
         location: "İzmit, Kocaeli",
         year: null,
         area: null,
         scope: null,
-        client: "İzmit Belediyesi",
+        client: null,
         description: null,
         images: [
-            { src: "https://minio.bkmimari.com/bkmimari/izmit-838x523.webp", alt: "İzmit Belediyesi hizmet binası, genel görünüm" },
-            { src: "https://minio.bkmimari.com/bkmimari/izmit1-1600x999.webp", alt: "İzmit Belediyesi hizmet binası, güneybatı cephesi" },
-            { src: "https://minio.bkmimari.com/bkmimari/izmit2-1600x1028.webp", alt: "İzmit Belediyesi hizmet binası, giriş cephesi" },
-            { src: "https://minio.bkmimari.com/bkmimari/izmit3-1600x1032.webp", alt: "İzmit Belediyesi hizmet binası, iç mekân görünümü" },
-            { src: "https://minio.bkmimari.com/bkmimari/izmit4-1600x991.webp", alt: "İzmit Belediyesi hizmet binası, yan cephe" },
-            { src: "https://minio.bkmimari.com/bkmimari/izmit5-1600x999.webp", alt: "İzmit Belediyesi hizmet binası, üst kat görünümü" },
+            { src: "https://minio.bkmimari.com/bkmimari/izmit-838x523.webp", alt: "Cedit Mahallesi projesi, genel görünüm" },
+            { src: "https://minio.bkmimari.com/bkmimari/izmit1-1600x999.webp", alt: "Cedit Mahallesi projesi, cephe görünümü" },
+            { src: "https://minio.bkmimari.com/bkmimari/izmit2-1600x1028.webp", alt: "Cedit Mahallesi projesi, giriş cephesi" },
+            { src: "https://minio.bkmimari.com/bkmimari/izmit3-1600x1032.webp", alt: "Cedit Mahallesi projesi, iç mekân görünümü" },
+            { src: "https://minio.bkmimari.com/bkmimari/izmit4-1600x991.webp", alt: "Cedit Mahallesi projesi, yan cephe" },
+            { src: "https://minio.bkmimari.com/bkmimari/izmit5-1600x999.webp", alt: "Cedit Mahallesi projesi, üst kat görünümü" },
         ],
     },
     {
